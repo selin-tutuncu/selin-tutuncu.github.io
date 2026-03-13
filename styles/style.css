@@ -1,87 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+/* Header ve Navigasyon */
+.main-header {
+    padding: 20px 50px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+}
+
+nav a.active {
+    background: #7986cb;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.intro-text {
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+.card {
+    flex: 1;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    line-height: 1.8;
+}
+
+.yellow-card { background-color: #fff9e6; }
+.blue-card { background-color: #e6f3ff; }
+
 .contact-container {
     width: 600px;
     margin: 40px auto;
-    padding: 25px;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #ffffff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
 }
 
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 30px;
-}
+.contact-container h2 { text-align: center; }
 
 label {
     display: block;
-    margin-bottom: 10px;
-    font-weight: 600;
-    color: #444;
+    margin: 15px 0 5px;
+    font-weight: bold;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"],
-select,
-textarea {
+input[type="text"], input[type="email"], input[type="password"], select, textarea {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 25px;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 5px;
     box-sizing: border-box;
-    font-size: 14px;
 }
 
 .option-box {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 6px;
-    margin-bottom: 25px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .check-label {
     font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    cursor: pointer;
-}
-
-input[type="file"] {
-    margin-bottom: 25px;
+    display: block;
+    margin: 5px 0;
 }
 
 .button-group {
     display: flex;
-    gap: 15px;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 button {
     flex: 1;
-    padding: 14px;
+    padding: 12px;
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
+    border-radius: 5px;
+    color: white;
     font-weight: bold;
     cursor: pointer;
-    transition: opacity 0.2s;
 }
 
-.btn-send {
-    background-color: #007bff;
-    color: white;
-}
+.btn-send { background-color: #007bff; }
+.btn-clear { background-color: #dc3545; }
 
-.btn-clear {
-    background-color: #dc3545;
-    color: white;
-}
-
-button:hover {
-    opacity: 0.9;
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
 }
