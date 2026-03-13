@@ -2,76 +2,224 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İletişim - Özgeçmiş Sayfası</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>İletişim - Selin Tütüncü</title>
+    <style>
+        /* Sayfa Genel Yapısı */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0eff6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 850px;
+            background-color: #ffffff;
+            border: 1px solid #dcdde1;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Navigasyon Çubuğu */
+        .navbar {
+            padding: 15px 25px;
+            background-color: #EBECF4;
+            border-bottom: 1px solid #e1e2e7;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .nav-links {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 10px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+            padding: 6px 12px;
+        }
+
+        .nav-links a.active {
+            background-color: #7d97c7;
+            color: white;
+            border-radius: 3px;
+        }
+
+        /* Form Alanı Stilleri [cite: 13, 14, 15, 16] */
+        .contact-content {
+            padding: 40px;
+        }
+
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto; [cite: 14]
+        }
+
+        .contact-container h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #444;
+            font-size: 14px;
+        }
+
+        /* Girdi Alanları Tasarımı [cite: 17, 18, 19, 20] */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%; 
+            padding: 12px; [cite: 19]
+            margin-bottom: 20px; [cite: 20]
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Seçenek Kutuları */
+        .option-box {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .option-box label {
+            font-weight: normal;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        /* Butonlar [cite: 21] */
+        .button-group {
+            display: flex;
+            gap: 15px;
+        }
+
+        button {
+            flex: 1;
+            padding: 14px; [cite: 21]
+            border: none; [cite: 21]
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+        }
+
+        .btn-gonder {
+            background-color: #007bff; [cite: 21]
+        }
+
+        .btn-temizle {
+            background-color: #dc3545;
+        }
+
+        /* Alt Bilgi */
+        .footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #f1f2f6;
+            border-top: 1px solid #e1e2e7;
+            color: #888;
+            font-size: 13px;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="page-wrapper">
-        <div class="container">
-            <nav class="navbar">
-                <h1 class="logo">CSS Temel Ödevi</h1>
-                <ul class="nav-links">
-                    <li><a href="index.html">Ana Sayfa</a></li>
-                    <li><a href="about.html">Hakkında</a></li>
-                    <li><a href="interests.html">Hizmetler</a></li>
-                    <li><a href="contact.html" class="active">İletişim</a></li>
-                </ul>
-            </nav>
+    <div class="container">
+        <nav class="navbar">
+            <h1 class="logo">CSS Temel Ödevi</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="interests.html">Hizmetler</a></li>
+                <li><a href="contact.html" class="active">İletişim</a></li>
+            </ul>
+        </nav>
 
-            <div class="contact-form-wrapper">
-                <div class="contact-container">
-                    <h2>Detaylı İletişim Formu</h2>
-                    
-                    <form action="#" method="post">
-                        <label for="ad-soyad">Ad Soyad:</label>
-                        <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: Selin Tütüncü" required>
+        <div class="contact-content">
+            <div class="contact-container">
+                <h2>Detaylı İletişim Formu</h2>
+                
+                <form action="#">
+                    <label for="ad-soyad">Ad Soyad:</label>
+                    <input type="text" id="ad-soyad" placeholder="Örn: Selin Tütüncü" required>
 
-                        <label for="email">E-posta Adresi:</label>
-                        <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+                    <label for="email">E-posta Adresi:</label>
+                    <input type="email" id="email" placeholder="selinttncu02@gmail.com" required>
 
-                        <label for="sifre">Başvuru Takip Şifresi:</label>
-                        <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+                    <label for="sifre">Başvuru Takip Şifresi:</label>
+                    <input type="password" id="sifre" placeholder="Şifrenizi girin">
 
-                        <label>İletişim Tercihi:</label>
-                        <div class="option-box">
-                            <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
-                            <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
-                        </div>
+                    <label>İletişim Tercihi:</label>
+                    <div class="option-box">
+                        <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
+                        <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
+                    </div>
 
-                        <label>İlgi Alanları / Yetenekler:</label>
-                        <div class="option-box">
-                            <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
-                            <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
-                            <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
-                        </div>
+                    <label>İlgi Alanları / Yetenekler:</label>
+                    <div class="option-box">
+                        <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
+                        <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
+                        <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
+                    </div>
 
-                        <label for="konu">Konu:</label>
-                        <select id="konu" name="konu">
-                            <option value="">Lütfen bir konu seçin...</option>
-                            <option value="is-teklifi">İş Teklifi</option>
-                            <option value="soru">Soru</option>
-                            <option value="geri-bildirim">Geri Bildirim</option>
-                        </select>
+                    <label for="konu">Konu:</label>
+                    <select id="konu">
+                        <option value="">Lütfen bir konu seçin...</option> [cite: 10]
+                        <option value="is-teklifi">İş Teklifi</option> [cite: 10]
+                        <option value="soru">Soru</option> [cite: 10]
+                        <option value="geri-bildirim">Geri Bildirim</option> [cite: 10]
+                    </select>
 
-                        <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-                        <input type="file" id="dosya" name="dosya" class="file-input">
+                    <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                    <input type="file" id="dosya">
 
-                        <label for="mesaj">Mesajınız:</label>
-                        <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+                    <label for="mesaj">Mesajınız:</label>
+                    <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea> [cite: 11]
 
-                        <div class="button-container">
-                            <button type="submit" class="btn-gonder">Gönder</button>
-                            <button type="reset" class="btn-temizle">Temizle</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="button-group">
+                        <button type="submit" class="btn-gonder">Gönder</button> [cite: 12]
+                        <button type="reset" class="btn-temizle">Temizle</button>
+                    </div>
+                </form>
             </div>
-
-            <footer class="footer">
-                <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
-            </footer>
         </div>
+
+        <footer class="footer">
+            <p>&copy; 2026 Selin | Web Programlama Dersi</p>
+        </footer>
     </div>
 
 </body>
