@@ -2,59 +2,58 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>İletişim - Selin Tütüncü</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim - Özgeçmiş Sayfası</title>
+    <link rel="stylesheet" href="styles/contact-style.css">
 </head>
 <body>
 
-<div class="contact-container">
-    <h2>Detaylı İletişim Formu</h2>
-    <form>
-        <label for="name">Ad Soyad:</label>
-        <input type="text" id="name" placeholder="Örn: Selin Tütüncü">
+    <div class="contact-container">
+        <h2>Detaylı İletişim Formu</h2>
+        
+        <form action="#" method="post">
+            <label for="ad-soyad">Ad Soyad:</label>
+            <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: Nuran Ferhan Kasap" required>
 
-        <label for="email">E-posta Adresi:</label>
-        <input type="email" id="email" placeholder="ornek@mail.com">
+            <label for="email">E-posta Adresi:</label>
+            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-        <label for="password">Başvuru Takip Şifresi:</label>
-        <input type="password" id="password" placeholder="Şifrenizi girin">
+            <label for="sifre">Başvuru Takip Şifresi:</label>
+            <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
 
-        <label>İletişim Tercihi:</label>
-        <div class="option-box">
-            <label class="check-label"><input type="radio" name="preference" value="email"> Bana e-posta ile ulaşın</label>
-            <label class="check-label"><input type="radio" name="preference" value="phone"> Bana telefonla ulaşın</label>
-        </div>
+            <label>İletişim Tercihi:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
+                <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
+            </div>
 
-        <label>İlgi Alanları / Yetenekler:</label>
-        <div class="option-box">
-            <label class="check-label"><input type="checkbox" name="skill" value="html"> HTML</label>
-            <label class="check-label"><input type="checkbox" name="skill" value="css"> CSS</label>
-            <label class="check-label"><input type="checkbox" name="skill" value="algorithm"> Algoritma</label>
-        </div>
+            <label>İlgi Alanları / Yetenekler:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
+                <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
+                <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
+            </div>
 
-        <label for="subject">Konu:</label>
-        <select id="subject">
-            <option value="" disabled selected>Lütfen bir konu seçin...</option>
-            <option value="is">İş Teklifi</option>
-            <option value="soru">Soru</option>
-            <option value="geri">Geri Bildirim</option>
-        </select>
+            <label for="konu">Konu:</label>
+            <select id="konu" name="konu">
+                <option value="">Lütfen bir konu seçin...</option>
+                <option value="is-teklifi">İş Teklifi</option>
+                <option value="soru">Soru</option>
+                <option value="geri-bildirim">Geri Bildirim</option>
+            </select>
 
-        <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-        <input type="file" id="file">
+            <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+            <input type="file" id="dosya" name="dosya" class="file-input">
 
-        <label for="message">Mesajınız:</label>
-        <textarea id="message" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            <label for="mesaj">Mesajınız:</label>
+            <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
-        <div class="button-group">
-            <button type="submit" class="btn-send">Gönder</button>
-            <button type="reset" class="btn-clear">Temizle</button>
-        </div>
-    </form>
-</div>
+            <div class="button-container">
+                <button type="submit" class="btn-gonder">Gönder</button>
+                <button type="reset" class="btn-temizle">Temizle</button>
+            </div>
+        </form>
+    </div>
 
 </body>
 </html>
-
-
-
