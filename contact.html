@@ -2,57 +2,76 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - Özgeçmiş Sayfası</title>
-    <link rel="stylesheet" href="styles/contact-style.css">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <div class="contact-container">
-        <h2>Detaylı İletişim Formu</h2>
-        
-        <form action="#" method="post">
-            <label for="ad-soyad">Ad Soyad:</label>
-            <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: Nuran Ferhan Kasap" required>
+    <div class="page-wrapper">
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="logo">CSS Temel Ödevi</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="interests.html">Hizmetler</a></li>
+                    <li><a href="contact.html" class="active">İletişim</a></li>
+                </ul>
+            </nav>
 
-            <label for="email">E-posta Adresi:</label>
-            <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
+            <div class="contact-form-wrapper">
+                <div class="contact-container">
+                    <h2>Detaylı İletişim Formu</h2>
+                    
+                    <form action="#" method="post">
+                        <label for="ad-soyad">Ad Soyad:</label>
+                        <input type="text" id="ad-soyad" name="ad-soyad" placeholder="Örn: Selin Tütüncü" required>
 
-            <label for="sifre">Başvuru Takip Şifresi:</label>
-            <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+                        <label for="email">E-posta Adresi:</label>
+                        <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-            <label>İletişim Tercihi:</label>
-            <div class="radio-group">
-                <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
-                <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
+                        <label for="sifre">Başvuru Takip Şifresi:</label>
+                        <input type="password" id="sifre" name="sifre" placeholder="Şifrenizi girin">
+
+                        <label>İletişim Tercihi:</label>
+                        <div class="option-box">
+                            <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
+                            <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
+                        </div>
+
+                        <label>İlgi Alanları / Yetenekler:</label>
+                        <div class="option-box">
+                            <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
+                            <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
+                            <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
+                        </div>
+
+                        <label for="konu">Konu:</label>
+                        <select id="konu" name="konu">
+                            <option value="">Lütfen bir konu seçin...</option>
+                            <option value="is-teklifi">İş Teklifi</option>
+                            <option value="soru">Soru</option>
+                            <option value="geri-bildirim">Geri Bildirim</option>
+                        </select>
+
+                        <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+                        <input type="file" id="dosya" name="dosya" class="file-input">
+
+                        <label for="mesaj">Mesajınız:</label>
+                        <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+
+                        <div class="button-container">
+                            <button type="submit" class="btn-gonder">Gönder</button>
+                            <button type="reset" class="btn-temizle">Temizle</button>
+                        </div>
+                    </form>
+                </div>
             </div>
 
-            <label>İlgi Alanları / Yetenekler:</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
-                <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
-                <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
-            </div>
-
-            <label for="konu">Konu:</label>
-            <select id="konu" name="konu">
-                <option value="">Lütfen bir konu seçin...</option>
-                <option value="is-teklifi">İş Teklifi</option>
-                <option value="soru">Soru</option>
-                <option value="geri-bildirim">Geri Bildirim</option>
-            </select>
-
-            <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-            <input type="file" id="dosya" name="dosya" class="file-input">
-
-            <label for="mesaj">Mesajınız:</label>
-            <textarea id="mesaj" name="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
-
-            <div class="button-container">
-                <button type="submit" class="btn-gonder">Gönder</button>
-                <button type="reset" class="btn-temizle">Temizle</button>
-            </div>
-        </form>
+            <footer class="footer">
+                <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
+            </footer>
+        </div>
     </div>
 
 </body>
