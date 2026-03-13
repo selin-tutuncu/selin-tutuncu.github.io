@@ -2,75 +2,78 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Ana Sayfa - Selin'in Portfolyosu</title>
+    <title>Selin'in Portfolyosu</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1>Selin</h1>
-        <p>Bilgisayar Mühendisliği | Web Programlama Öğrencisi</p> 
+
+    <header class="main-header">
+        <div class="header-content">
+            <h1>CSS Temel Ödevi</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Ana Sayfa</a></li>
+                    <li><a href="#">Hakkında</a></li>
+                    <li><a href="#">Hizmetler</a></li>
+                    <li><a href="#iletisim-formu">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+        <p class="intro-text">Verilen benzer bir düzenle basit bir web sayfası oluşturun. CSS'in temel özelliklerini uygulayın. Sadece HTML5 + CSS3 kullanın.</p>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Ana Sayfa</a></li>
-            <li><a href="about.html">Hakkımda</a></li>
-            <li><a href="interests.html">İlgi Alanlarım</a></li>
-            <li><a href="#iletisim-formu">İletişim</a></li> 
-        </ul>
-    </nav>
+    <main class="container">
+        <div class="card yellow-card">
+            <h2>İçerik</h2>
+            <p>Bu alanda örnek içerik metinleri bulunmaktadır. Css özellikleriyle bu metinler arasında <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlemeleririz.</p>
+            <p>Önce CSS ile kutuları / alanları yan yana getirmeyi, ardından alt alta yerleştirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı göreceğiz.</p>
+        </div>
 
-    <main>
-        <h2>Hoş Geldiniz</h2> 
-        <p>Bu web sitesi, Web Programlama dersi kapsamında hazırlanmış <strong>örnek bir kişisel tanıtım sayfasıdır.</strong></p> 
-        
-        <h2>Hızlı Bilgiler</h2>
-        <ul>
-            <li>Üniversite: Marmara Üniversitesi</li>
-            <li>Bölüm: Bilgisayar Mühendisliği</li>
-            <li>İlgi Alanı: Web Teknolojileri</li>
-        </ul> 
+        <div class="card blue-card">
+            <h2>Yan Menü / Bilgi</h2>
+            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), yükseklik (height), kenar boşlukları (margin/padding) ve kenarlık (border) özelliklerini kullanarak düzenleyebiliriz.</p>
+            <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farklı bölümlere stil verebiliriz.</p>
+        </div>
     </main>
 
     <div id="iletisim-formu" class="contact-container">
         <h2>Detaylı İletişim Formu</h2>
-        
         <form>
-            <label for="name">Ad Soyad:</label>
-            <input type="text" id="name" placeholder="Örn: Asaf Karataş">
+            <label>Ad Soyad:</label>
+            <input type="text" placeholder="Örn: Asaf Karataş">
 
-            <label for="email">E-posta Adresi:</label>
-            <input type="email" id="email" placeholder="ornek@mail.com">
+            <label>E-posta Adresi:</label>
+            <input type="email" placeholder="ornek@mail.com">
 
-            <label for="password">Başvuru Takip Şifresi:</label>
-            <input type="password" id="password" placeholder="Şifrenizi girin">
+            <label>Başvuru Takip Şifresi:</label>
+            <input type="password" placeholder="Şifrenizi girin">
 
             <label>İletişim Tercihi:</label>
             <div class="option-box">
-                <label class="check-label"><input type="radio" name="preference" value="email"> Bana e-posta ile ulaşın</label>
-                <label class="check-label"><input type="radio" name="preference" value="phone"> Bana telefonla ulaşın</label>
+                <label class="check-label"><input type="radio" name="pref"> Bana e-posta ile ulaşın</label>
+                <label class="check-label"><input type="radio" name="pref"> Bana telefonla ulaşın</label>
             </div>
 
             <label>İlgi Alanları / Yetenekler:</label>
             <div class="option-box">
-                <label class="check-label"><input type="checkbox" name="skill" value="html"> HTML</label>
-                <label class="check-label"><input type="checkbox" name="skill" value="css"> CSS</label>
-                <label class="check-label"><input type="checkbox" name="skill" value="algorithm"> Algoritma</label>
+                <label class="check-label"><input type="checkbox"> HTML</label>
+                <label class="check-label"><input type="checkbox"> CSS</label>
+                <label class="check-label"><input type="checkbox"> Algoritma</label>
             </div>
 
-            <label for="subject">Konu:</label>
-            <select id="subject">
-                <option value="" disabled selected>Lütfen bir konu seçin...</option>
-                <option value="is">İş Teklifi</option>
-                <option value="soru">Soru</option>
-                <option value="geri">Geri Bildirim</option>
+            <label>Konu:</label>
+            <select>
+                <option disabled selected>Lütfen bir konu seçin...</option>
+                <option>İş Teklifi</option>
+                <option>Soru</option>
+                <option>Geri Bildirim</option>
             </select>
 
-            <label for="file">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-            <input type="file" id="file">
+            <label>Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
+            <input type="file">
 
-            <label for="message">Mesajınız:</label>
-            <textarea id="message" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
+            <label>Mesajınız:</label>
+            <textarea rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
 
             <div class="button-group">
                 <button type="submit" class="btn-send">Gönder</button>
@@ -80,7 +83,8 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Selin | Web Programlama Dersi</p> 
+        <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML-CSS alıştırmasıdır.</p>
     </footer>
+
 </body>
 </html>
