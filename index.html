@@ -2,217 +2,46 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <title>Selin'in Portfolyosu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-
-        .main-header {
-            padding: 20px 50px;
-            background: white;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #666;
-        }
-
-        nav a.active {
-            background: #7986cb;
-            color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-        }
-
-        .intro-text {
-            margin-top: 20px;
-            line-height: 1.6;
-        }
-
-        .container {
-            display: flex;
-            gap: 20px;
-            padding: 40px 50px;
-        }
-
-        .card {
-            flex: 1;
-            padding: 30px;
-            border-radius: 8px;
-            border: 1px solid #ddd;
-            line-height: 1.8;
-        }
-
-        .yellow-card { background-color: #fff9e6; }
-        .blue-card { background-color: #e6f3ff; }
-
-        .contact-container {
-            width: 600px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .contact-container h2 { 
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        label {
-            display: block;
-            margin: 15px 0 5px;
-            font-weight: bold;
-        }
-
-        input[type="text"], input[type="email"], input[type="password"], select, textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        .option-box {
-            background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-
-        .check-label {
-            font-weight: normal;
-            display: block;
-            margin: 5px 0;
-            cursor: pointer;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        button {
-            flex: 1;
-            padding: 14px;
-            border: none;
-            border-radius: 6px;
-            color: white;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        .btn-send { background-color: #007bff; }
-        .btn-clear { background-color: #dc3545; }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid #ddd;
-            margin-top: 40px;
-            background: white;
-        }
-    </style>
+    <title>CSS Temel Ödevi</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
 
-    <header class="main-header">
-        <div class="header-content">
-            <h1>CSS Temel Ödevi</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" class="active">Ana Sayfa</a></li>
-                    <li><a href="#">Hakkında</a></li>
-                    <li><a href="#">Hizmetler</a></li>
-                    <li><a href="#iletisim-formu">İletişim</a></li>
+    <div class="page-wrapper">
+        <div class="container">
+            <nav class="navbar">
+                <h1 class="logo">CSS Temel Ödevi</h1>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Ana Sayfa</a></li>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="interests.html">Hizmetler</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
                 </ul>
             </nav>
+
+            <header class="intro-text">
+                <p>Verilen benzer bir düzenle basit bir web sayfası oluşturun. CSS'in temel özelliklerini (<span>display</span>, <span>width</span>, <span>height</span>, <span>margin</span>, <span>padding</span>, <span>border</span>, selector) uygulayın. Sadece HTML5 + CSS3 kullanın, hazır framework kullanmak yasak (Bootstrap, Tailwind vb.).</p>
+            </header>
+
+            <main class="content-section">
+                <article class="box box-yellow">
+                    <h3>İçerik</h3>
+                    <p>Bu alanda örnek içerik metinleri bulunmaktadır. Css özellikleriyle bu metinler arasında <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlelleririz.</p>
+                    <p>Önce CSS ile kutuları / alanlari yan yana getirmeyi, ardından alt alta yerleştirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak grup ve hiyerarşik seçimler yapmayı göreceğiz.</p>
+                </article>
+
+                <aside class="box box-blue">
+                    <h3>Yan Menü / Bilgi</h3>
+                    <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), yükseklik (height), kenar boşlukları (margin/padding) ve kenarlık (border) özelliklerini kullanarak düzenleyebiliriz.</p>
+                    <p>Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp farkii bölümlere stil verebiliriz.</p>
+                </aside>
+            </main>
+
+            <footer class="footer">
+                <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML+CSS alıştırmasıdır.</p>
+            </footer>
         </div>
-        <p class="intro-text">Verilen benzer bir düzenle basit bir web sayfası oluşturun. CSS'in temel özelliklerini uygulayın. Sadece HTML5 + CSS3 kullanın.</p>
-    </header>
-
-    <main class="container">
-        <div class="card yellow-card">
-            <h2>İçerik</h2>
-            <p>Bu alanda örnek içerik metinleri bulunmaktadır. Css özellikleriyle bu metinler arasında <strong>boşluklar</strong> (line-height) ve hizalamalar (text-align) düzenlemeleririz.</p>
-            <p>Önce CSS ile kutuları / alanları yan yana getirmeyi, ardından alt alta yerleştirmeyi öğrendik.</p>
-        </div>
-
-        <div class="card blue-card">
-            <h2>Yan Menü / Bilgi</h2>
-            <p>Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width), yükseklik (height), kenar boşlukları (margin/padding) ve kenarlık (border) özelliklerini kullanarak düzenleyebiliriz.</p>
-        </div>
-    </main>
-
-    <div id="iletisim-formu" class="contact-container">
-        <h2>Detaylı İletişim Formu</h2>
-        <form>
-            <label>Ad Soyad:</label>
-            <input type="text" placeholder="Örn: Asaf Karataş">
-
-            <label>E-posta Adresi:</label>
-            <input type="email" placeholder="ornek@mail.com">
-
-            <label>Başvuru Takip Şifresi:</label>
-            <input type="password" placeholder="Şifrenizi girin">
-
-            <label>İletişim Tercihi:</label>
-            <div class="option-box">
-                <label class="check-label"><input type="radio" name="pref"> Bana e-posta ile ulaşın</label>
-                <label class="check-label"><input type="radio" name="pref"> Bana telefonla ulaşın</label>
-            </div>
-
-            <label>İlgi Alanları / Yetenekler:</label>
-            <div class="option-box">
-                <label class="check-label"><input type="checkbox"> HTML</label>
-                <label class="check-label"><input type="checkbox"> CSS</label>
-                <label class="check-label"><input type="checkbox"> Algoritma</label>
-            </div>
-
-            <label>Konu:</label>
-            <select>
-                <option disabled selected>Lütfen bir konu seçin...</option>
-                <option>İş Teklifi</option>
-                <option>Soru</option>
-                <option>Geri Bildirim</option>
-            </select>
-
-            <label>Mesajınız:</label>
-            <textarea rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea>
-
-            <div class="button-group">
-                <button type="submit" class="btn-send">Gönder</button>
-                <button type="reset" class="btn-clear">Temizle</button>
-            </div>
-        </form>
     </div>
-
-    <footer>
-        <p>&copy; 2026 CSS Temel Örnek. Bu sayfa basit bir HTML-CSS alıştırmasıdır.</p>
-    </footer>
 
 </body>
 </html>
