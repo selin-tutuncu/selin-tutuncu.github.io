@@ -3,100 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Uygulama Ödevi</title>
+    <title>Flexbox Uygulama</title>
+
     <style>
-        /* Sadece temel yapı ve renkler */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
         .wrapper {
             display: flex;
             flex-direction: column;
-            height: 100vh; /* Tam ekran yüksekliği */
+            height: 100vh;
         }
 
-        /* Ortak Yazı Tipi ve Hizalama */
-        .section {
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+            padding: 0 20px;
+            background: #f1c40f;
+        }
+
+        .menu {
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            background: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            color: black;
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            height: 30vh;
+        }
+
+        .hero-left {
+            flex: 1;
+            background: #e67e22;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .hero-right {
+            flex: 1;
+            background: #95a5a6;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: 30vh;
+            padding: 10px;
+        }
+
+        .card {
+            flex: 1 1 30%;
+            background: #3498db;
+            color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border: 1px solid rgba(0,0,0,0.1);
         }
 
-        /* 1) NAVBAR - Sarı */
-        .navbar {
-            height: 10vh;
-            background-color: #f1c40f;
-            justify-content: space-around; /* Logo ve linkler için */
-        }
-        .navbar a { background: white; padding: 5px 10px; text-decoration: none; color: black; border-radius: 5px; font-size: 1rem; }
-
-        /* 2) HERO - Turuncu ve Gri */
-        .hero {
-            height: 30vh;
+        .grow {
             display: flex;
-        }
-        .hero-left { flex: 1; background-color: #e67e22; color: white; }
-        .hero-right { flex: 1; background-color: #95a5a6; color: white; }
-
-        /* 3) KARTLAR - Mavi */
-        .cards {
-            height: 30vh;
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .card { flex: 1 1 33.33%; background-color: #3498db; color: white; border: 1px solid white; }
-
-        /* 4) GROW - Yeşil Tonları */
-        .grow-area {
             height: 20vh;
-            display: flex;
         }
-        .g1 { flex-grow: 1; background-color: #1abc9c; color: white; }
-        .g2 { flex-grow: 2; background-color: #2ecc71; color: white; border-left: 2px solid white; border-right: 2px solid white; }
-        .g3 { flex-grow: 1; background-color: #1abc9c; color: white; }
 
-        /* 5) FOOTER - Koyu Gri */
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .box1 {
+            flex-grow: 1;
+            background: #1abc9c;
+        }
+
+        .box2 {
+            flex-grow: 2;
+            background: #2ecc71;
+        }
+
+        .box3 {
+            flex-grow: 1;
+            background: #1abc9c;
+        }
+
         .footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 10vh;
-            background-color: #34495e;
+            background: #34495e;
             color: white;
         }
     </style>
 </head>
+
 <body>
 
-    <div class="wrapper">
-        <header class="section navbar">
-            <div>NAVBAR</div>
-            <a href="index.html">GERİ DÖN</a>
-        </header>
+<div class="wrapper">
 
-        <section class="hero">
-            <div class="section hero-left">HERO LEFT</div>
-            <div class="section hero-right">HERO RIGHT</div>
-        </section>
+    <div class="navbar">
+        <div>LOGO</div>
 
-        <section class="cards">
-            <div class="section card">KART 1</div>
-            <div class="section card">KART 2</div>
-            <div class="section card">KART 3</div>
-            <div class="section card">KART 4</div>
-            <div class="section card">KART 5</div>
-            <div class="section card">KART 6</div>
-        </section>
-
-        <section class="grow-area">
-            <div class="section g1">GROW: 1</div>
-            <div class="section g2">GROW: 2</div>
-            <div class="section g3">GROW: 1</div>
-        </section>
-
-        <footer class="section footer">
-            FOOTER (10vh)
-        </footer>
+        <div class="menu">
+            <a href="#">Ana Sayfa</a>
+            <a href="#">Hakkında</a>
+            <a href="#">Dersler</a>
+            <a href="#">İletişim</a>
+            <a href="index.html">Geri Dön</a>
+        </div>
     </div>
+
+    <div class="hero">
+        <div class="hero-left">
+            <h2>Hero Alanı</h2>
+            <p>Flexbox ile hizalama örneği</p>
+        </div>
+        <div class="hero-right"></div>
+    </div>
+
+    <div class="cards">
+        <div class="card">Kart 1</div>
+        <div class="card">Kart 2</div>
+        <div class="card">Kart 3</div>
+        <div class="card">Kart 4</div>
+        <div class="card">Kart 5</div>
+        <div class="card">Kart 6</div>
+    </div>
+
+    <div class="grow">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+
+    <div class="footer">
+        Footer
+    </div>
+
+</div>
 
 </body>
 </html>
