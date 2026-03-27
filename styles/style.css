@@ -1,3 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0eff6;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 900px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EBECF4;
+    padding: 15px 25px;
+}
+
+.logo {
+    margin: 0;
+    font-size: 20px;
+}
+
+.intro-text {
+    padding: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.content-section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.box {
+    flex: 1;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.box-yellow {
+    background-color: #f3e5c8;
+}
+
+.box-blue {
+    background-color: #d9e6f2;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #f1f2f6;
+    color: #777;
+}
+
 .contact-form-wrapper {
     padding: 25px;
     background-color: #ffffff;
