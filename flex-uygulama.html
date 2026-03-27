@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Uygulama Ödevi</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .flex-nav {
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c3e50;
+            color: white;
+            padding: 0 5%;
+        }
+        .flex-nav a { color: white; text-decoration: none; border: 1px solid white; padding: 4px 10px; border-radius: 4px; font-size: 13px; }
+
+        .flex-hero {
+            height: 30vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            background-color: #f5f6fa;
+            padding: 10px 5%;
+        }
+        .hero-left { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        .hero-right { flex: 1; background: #bdc3c7; margin-left: 20px; display: flex; justify-content: center; align-items: center; border-radius: 8px; }
+
+        .flex-cards {
+            height: 30vh;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px 5%;
+            background: white;
+        }
+        .card { flex: 1 1 calc(33% - 10px); background: #3498db; color: white; display: flex; justify-content: center; align-items: center; border-radius: 5px; }
+
+        .flex-grow-zone {
+            height: 20vh;
+            display: flex;
+            gap: 10px;
+            padding: 10px 5%;
+            background: #f1f2f6;
+        }
+        .g-1 { flex-grow: 1; background: #1abc9c; }
+        .g-2 { flex-grow: 2; background: #16a085; }
+        .g-3 { flex-grow: 1; background: #1abc9c; }
+        .grow-box { display: flex; justify-content: center; align-items: center; color: white; font-weight: bold; }
+
+        .flex-footer {
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #2c3e50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="flex-nav">
+            <div class="logo">FLEX LOGO</div>
+            <a href="index.html">Ana Sayfaya Dön</a>
+        </nav>
+        <section class="flex-hero">
+            <div class="hero-left">
+                <h1>Hero Başlık</h1>
+                <p>flex-direction: row ve stretch uygulaması.</p>
+            </div>
+            <div class="hero-right">Görsel Alanı</div>
+        </section>
+        <section class="flex-cards">
+            <div class="card">1</div><div class="card">2</div><div class="card">3</div>
+            <div class="card">4</div><div class="card">5</div><div class="card">6</div>
+        </section>
+        <section class="flex-grow-zone">
+            <div class="grow-box g-1">1</div>
+            <div class="grow-box g-2">2</div>
+            <div class="grow-box g-3">1</div>
+        </section>
+        <footer class="flex-footer">Flexbox Ödevi - 10vh</footer>
+    </div>
+</body>
+</html>
