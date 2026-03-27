@@ -2,8 +2,29 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Temel Ödevi</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        .nav-links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+        }
+        .odev-btn {
+            background-color: #e67e22; 
+            color: white !important;
+            padding: 5px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: 0.3s;
+            margin-left: 10px;
+        }
+        .odev-btn:hover {
+            background-color: #d35400;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,6 +37,7 @@
                     <li><a href="about.html">Hakkında</a></li>
                     <li><a href="interests.html">Hizmetler</a></li>
                     <li><a href="contact.html">İletişim</a></li>
+                    <li><a href="flex-uygulama.html" class="odev-btn">Flexbox Ödevi</a></li>
                 </ul>
             </nav>
 
