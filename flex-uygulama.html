@@ -5,94 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Uygulama Ödevi</title>
     <style>
-        /* Temel Sıfırlama */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        /* SIFIRLAMA VE ANA YAPI */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
 
-        /* Ana Kapsayıcı - 100vh Zorunluluğu */
         .wrapper {
             display: flex;
-            flex-direction: column; /* Dikey dizilim */
-            height: 100vh;
-            text-align: center;
+            flex-direction: column;
+            height: 100vh; /* Tam ekran yüksekliği */
+            width: 100%;
         }
 
-        /* 1) Navbar - 10vh */
+        /* 1) NAVBAR - 10vh */
         .navbar {
             height: 10vh;
-            background-color: #f1c40f; /* Sarı */
+            background-color: #f1c40f;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 5%;
+            padding: 0 30px;
+            border: 2px solid black;
         }
         .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { text-decoration: none; color: black; font-weight: bold; background: white; padding: 5px 10px; border-radius: 4px; }
+        .nav-links a { text-decoration: none; color: black; background: white; padding: 5px 15px; border: 2px solid black; font-size: 14px; }
 
-        /* 2) Hero - 30vh */
+        /* 2) HERO - 30vh */
         .hero {
             height: 30vh;
             display: flex;
-            flex-direction: row; /* Yatay dizilim */
-            background-color: #ecf0f1;
+            flex-direction: row;
         }
         .hero-left { 
             flex: 1; 
-            background-color: #e67e22; /* Turuncu */
+            background-color: #e67e22; 
             display: flex; 
-            flex-direction: column; 
             justify-content: center; 
-            align-items: center;
-            color: white;
-            border: 2px solid white;
+            align-items: center; 
+            color: white; 
+            border: 2px solid black;
+            font-size: 2rem;
         }
         .hero-right { 
             flex: 1; 
-            background-color: #95a5a6; /* Gri */
+            background-color: #95a5a6; 
             display: flex; 
             justify-content: center; 
-            align-items: center;
-            color: white;
-            border: 2px solid white;
+            align-items: center; 
+            color: white; 
+            border: 2px solid black;
+            font-size: 2rem;
         }
 
-        /* 3) Kartlar - 30vh */
-        .cards-section {
+        /* 3) KARTLAR - 30vh */
+        .cards-container {
             height: 30vh;
             display: flex;
-            flex-wrap: wrap; /* Sığmazsa alta geç */
-            background-color: #fff;
+            flex-wrap: wrap;
         }
         .card { 
-            flex: 1 1 calc(33.33% - 4px); 
-            background-color: #3498db; /* Mavi */
+            flex: 1 1 33.33%; 
+            background-color: #3498db; 
             color: white; 
             display: flex; 
             align-items: center; 
-            justify-content: center;
-            border: 2px solid white;
-            font-size: 1.2rem;
+            justify-content: center; 
+            border: 2px solid black;
+            font-size: 1.5rem;
         }
 
-        /* 4) Flex Grow - 20vh */
+        /* 4) GROW - 20vh */
         .grow-section {
             height: 20vh;
             display: flex;
-            background-color: #bdc3c7;
         }
-        .box { display: flex; align-items: center; justify-content: center; color: white; border: 2px solid white; }
-        .box-1 { flex-grow: 1; background-color: #1abc9c; } /* Yeşil */
-        .box-2 { flex-grow: 2; background-color: #2ecc71; } /* Daha açık yeşil */
-        .box-3 { flex-grow: 1; background-color: #1abc9c; } /* Yeşil */
+        .box { display: flex; align-items: center; justify-content: center; color: white; border: 2px solid black; font-size: 1.5rem; }
+        .box1 { flex-grow: 1; background-color: #1abc9c; }
+        .box2 { flex-grow: 2; background-color: #2ecc71; }
+        .box3 { flex-grow: 1; background-color: #1abc9c; }
 
-        /* 5) Footer - 10vh */
+        /* 5) FOOTER - 10vh */
         .footer {
             height: 10vh;
-            background-color: #34495e; /* Koyu Gri */
+            background-color: #34495e;
             color: white;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 1.5rem;
+            border: 2px solid black;
+            font-size: 2rem;
         }
     </style>
 </head>
@@ -100,27 +99,20 @@
 
     <div class="wrapper">
         <header class="navbar">
-            <div class="logo">LOGO (Navbar)</div>
+            <div>NAVBAR (10vh)</div>
             <ul class="nav-links">
-                <li><a href="index.html">Geri Dön</a></li>
+                <li><a href="index.html">GERİ DÖN</a></li>
                 <li>Link 1</li>
                 <li>Link 2</li>
-                <li>Link 3</li>
             </ul>
         </header>
 
         <section class="hero">
-            <div class="hero-left">
-                <h2>HERO LEFT</h2>
-                <p>(Metin + Buton)</p>
-            </div>
-            <div class="hero-right">
-                <h2>HERO RIGHT</h2>
-                <p>(Görsel Alanı)</p>
-            </div>
+            <div class="hero-left">HERO LEFT</div>
+            <div class="hero-right">HERO RIGHT</div>
         </section>
 
-        <section class="cards-section">
+        <section class="cards-container">
             <div class="card">KART 1</div>
             <div class="card">KART 2</div>
             <div class="card">KART 3</div>
@@ -130,9 +122,9 @@
         </section>
 
         <section class="grow-section">
-            <div class="box box-1">GROW: 1</div>
-            <div class="box box-2">GROW: 2</div>
-            <div class="box box-3">GROW: 1</div>
+            <div class="box box1">GROW: 1</div>
+            <div class="box box2">GROW: 2</div>
+            <div class="box box3">GROW: 1</div>
         </section>
 
         <footer class="footer">
