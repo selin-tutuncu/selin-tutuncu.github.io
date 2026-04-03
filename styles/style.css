@@ -202,6 +202,11 @@ body::before {
   box-shadow: 0 10px 24px rgba(37, 99, 235, 0.18);
 }
 
+.action-row a:only-child {
+  background: rgba(249, 115, 22, 0.12);
+  color: #9a3412;
+}
+
 .quick-links,
 .timeline-list,
 .social-list,
@@ -259,19 +264,6 @@ blockquote {
   margin-right: auto;
 }
 
-.eyebrow {
-  display: inline-block;
-  padding: 7px 12px;
-  margin-bottom: 12px;
-  border-radius: 999px;
-  background: rgba(37, 99, 235, 0.1);
-  color: var(--primary-dark);
-  font-size: 0.82rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .panel-wide {
   padding: 38px;
 }
@@ -315,24 +307,6 @@ blockquote {
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 600;
-}
-
-.pill-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.pill-row span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 36px;
-  padding: 0 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  color: var(--muted);
-  font-size: 0.88rem;
 }
 
 .showcase-hero {
@@ -385,7 +359,11 @@ blockquote {
   width: 60%;
 }
 
-.showcase-copy button {
+.showcase-button,
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: fit-content;
   min-width: 110px;
   margin-top: 10px;
@@ -395,8 +373,15 @@ blockquote {
   background: linear-gradient(135deg, var(--primary), #5b8cff);
   color: #ffffff;
   font-weight: 700;
-  cursor: pointer;
+  text-decoration: none;
   box-shadow: 0 14px 24px rgba(37, 99, 235, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.showcase-button:hover,
+.card-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px rgba(37, 99, 235, 0.24);
 }
 
 .art-box {
@@ -429,6 +414,8 @@ blockquote {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.94);
   border: 1px solid rgba(148, 163, 184, 0.16);
+  display: flex;
+  flex-direction: column;
 }
 
 .showcase-grow {
@@ -442,6 +429,8 @@ blockquote {
   padding: 22px;
   border-radius: 18px;
   border: 1px solid rgba(148, 163, 184, 0.14);
+  display: flex;
+  flex-direction: column;
 }
 
 .grow-a {
