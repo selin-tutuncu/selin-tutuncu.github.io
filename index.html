@@ -1,126 +1,54 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Temel Ödevi</title>
-
-    <!--  DÜZELTİLDİ: CSS yolu -->
-    <link rel="stylesheet" href="style.css">
-
-    <style>
-        .nav-links {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 10px; 
-        }
-
-        .nav-links li {
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #444;
-            padding: 6px 12px;
-        }
-
-        .nav-links a.active {
-            background-color: #7d97c7;
-            color: white;
-            border-radius: 4px;
-        }
-
-
-        .odev-btn {
-            background-color: #e67e22; 
-            color: white !important;
-            padding: 6px 14px;
-            border-radius: 4px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        .odev-btn:hover {
-            background-color: #d35400;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Uygulamasi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="wrapper">
+    <nav class="navbar">
+      <div class="logo">FlexLab</div>
+      <div class="nav-links">
+        <a href="#">Ana Sayfa</a>
+        <a href="#">Hizmetler</a>
+        <a href="#">Projeler</a>
+        <a href="#">Iletisim</a>
+      </div>
+    </nav>
 
-<div class="page-wrapper">
-    <div class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Flexbox ile Guclu Yerlesim</h1>
+        <p>
+          Bu bolumde iki kolonlu yapi, hizalama ve esneyebilen alanlar birlikte kullanilmistir.
+        </p>
+        <button>Daha Fazla Incele</button>
+      </div>
+      <div class="hero-visual">
+        <span>Gorsel Kutusu</span>
+      </div>
+    </section>
 
-        <!-- NAVBAR -->
-        <nav class="navbar">
-            <h1 class="logo">CSS Temel Ödevi</h1>
+    <section class="cards-section">
+      <article class="card">Kart 1</article>
+      <article class="card">Kart 2</article>
+      <article class="card">Kart 3</article>
+      <article class="card">Kart 4</article>
+      <article class="card">Kart 5</article>
+      <article class="card">Kart 6</article>
+    </section>
 
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkında</a></li>
-                <li><a href="interests.html">Hizmetler</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+    <section class="growth-section">
+      <div class="grow-box box-one">Flex 1</div>
+      <div class="grow-box box-two">Flex 2</div>
+      <div class="grow-box box-three">Flex 1</div>
+    </section>
 
-                <!-- BURASI ÇALIŞIYOR --
-                <li>
-                    <a href="flex-uygulama.html" class="odev-btn">
-                        Flexbox Ödevi
-                    </a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- AÇIKLAMA -->
-        <header class="intro-text">
-            <p>
-                Verilen benzer bir düzenle basit bir web sayfası oluşturun.
-                CSS'in temel özelliklerini (<span>display</span>, <span>width</span>,
-                <span>height</span>, <span>margin</span>, <span>padding</span>,
-                <span>border</span>, selector) uygulayın.
-                Sadece HTML5 + CSS3 kullanın, hazır framework kullanmak yasak.
-            </p>
-        </header>
-
-        <!-- İÇERİK -->
-        <main class="content-section">
-
-            <article class="box box-yellow">
-                <h3>İçerik</h3>
-                <p>
-                    Bu alanda örnek içerik metinleri bulunmaktadır. CSS özellikleriyle
-                    bu metinler arasında <strong>boşluklar</strong> (line-height)
-                    ve hizalamalar (text-align) düzenleriz.
-                </p>
-                <p>
-                    Önce CSS ile kutuları yan yana getirmeyi, ardından alt alta
-                    yerleştirmeyi öğrendik. Şimdi ise CSS seçicilerini kullanarak
-                    grup ve hiyerarşik seçimler yapmayı göreceğiz.
-                </p>
-            </article>
-
-            <aside class="box box-blue">
-                <h3>Yan Menü / Bilgi</h3>
-                <p>
-                    Bu alan yan menü veya bilgi kısmıdır. CSS ile genişlik (width),
-                    yükseklik (height), margin/padding ve border kullanarak düzenleriz.
-                </p>
-                <p>
-                    Öğrendiklerimizi hiyerarşik ve grup seçicilerle uygulayıp
-                    farklı bölümlere stil verebiliriz.
-                </p>
-            </aside>
-
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="footer">
-            <p>&copy; 2026 CSS Temel Örnek.</p>
-        </footer>
-
-    </div>
-</div>
-
+    <footer class="footer">
+      <p>Flexbox laboratuvar uygulamasi</p>
+    </footer>
+  </div>
 </body>
 </html>
