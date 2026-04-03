@@ -1,219 +1,50 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İletişim - Selin Tütüncü</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background-color: #f0eff6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        .container {
-            width: 850px;
-            background-color: #ffffff;
-            border: 1px solid #dcdde1;
-            border-radius: 4px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .navbar {
-            padding: 15px 25px;
-            background-color: #EBECF4;
-            border-bottom: 1px solid #e1e2e7;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            margin: 0;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .nav-links {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 10px;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #444;
-            font-size: 14px;
-            padding: 6px 12px;
-        }
-
-        .nav-links a.active {
-            background-color: #7d97c7;
-            color: white;
-            border-radius: 3px;
-        }
-
-        .contact-content {
-            padding: 40px;
-        }
-
-        .contact-container {
-            max-width: 600px;
-            margin: 0 auto; 
-        }
-
-        .contact-container h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #333;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: #444;
-            font-size: 14px;
-        }
-
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select,
-        textarea {
-            width: 100%; 
-            padding: 12px; 
-            margin-bottom: 20px; 
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        .option-box {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-            border: 1px solid #e9ecef;
-        }
-
-        .option-box label {
-            font-weight: normal;
-            display: block;
-            margin-bottom: 10px;
-            cursor: pointer;
-        }
-
-        .button-group {
-            display: flex;
-            gap: 15px;
-        }
-
-        button {
-            flex: 1;
-            padding: 14px; 
-            border: none; 
-            border-radius: 4px;
-            font-weight: bold;
-            cursor: pointer;
-            font-size: 16px;
-            color: white;
-        }
-
-        .btn-gonder {
-            background-color: #007bff; 
-        }
-
-        .btn-temizle {
-            background-color: #dc3545;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #f1f2f6;
-            border-top: 1px solid #e1e2e7;
-            color: #888;
-            font-size: 13px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iletisim | Mini Portfolyo</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
+  <header>
     <div class="container">
-        <nav class="navbar">
-            <h1 class="logo">CSS Temel Ödevi</h1>
-            <ul class="nav-links">
-                <li><a href="index.html">Ana Sayfa</a></li>
-                <li><a href="about.html">Hakkında</a></li>
-                <li><a href="interests.html">Hizmetler</a></li>
-                <li><a href="contact.html" class="active">İletişim</a></li>
-            </ul>
-        </nav>
-
-        <div class="contact-content">
-            <div class="contact-container">
-                <h2>Detaylı İletişim Formu</h2>
-                
-                <form action="#">
-                    <label for="ad-soyad">Ad Soyad:</label>
-                    <input type="text" id="ad-soyad" placeholder="Örn: Selin Tütüncü" required translate="no">
-
-                    <label for="email">E-posta Adresi:</label>
-                    <input type="email" id="email" placeholder="selinttncu02@gmail.com" required>
-
-                    <label for="sifre">Başvuru Takip Şifresi:</label>
-                    <input type="password" id="sifre" placeholder="Şifrenizi girin">
-
-                    <label>İletişim Tercihi:</label>
-                    <div class="option-box">
-                        <label><input type="radio" name="tercih" value="email"> Bana e-posta ile ulaşın</label>
-                        <label><input type="radio" name="tercih" value="telefon"> Bana telefonla ulaşın</label>
-                    </div>
-
-                    <label>İlgi Alanları / Yetenekler:</label>
-                    <div class="option-box">
-                        <label><input type="checkbox" name="yetenek" value="html"> HTML</label>
-                        <label><input type="checkbox" name="yetenek" value="css"> CSS</label>
-                        <label><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
-                    </div>
-
-                    <label for="konu">Konu:</label>
-                    <select id="konu">
-                        <option value="">Lütfen bir konu seçin...</option> 
-                        <option value="is-teklifi">İş Teklifi</option> 
-                        <option value="soru">Soru</option>
-                        <option value="geri-bildirim">Geri Bildirim</option> 
-                    </select>
-
-                    <label for="dosya">Özgeçmiş (CV) veya Fotoğraf Yükle:</label>
-                    <input type="file" id="dosya">
-
-                    <label for="mesaj">Mesajınız:</label>
-                    <textarea id="mesaj" rows="5" placeholder="Detaylı mesajınızı buraya yazabilirsiniz..."></textarea> 
-
-                    <div class="button-group">
-                        <button type="submit" class="btn-gonder">Gönder</button> 
-                        <button type="reset" class="btn-temizle">Temizle</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <footer class="footer" translate="no">
-            <p>&copy; 2026 Selin | Web Programlama Dersi</p>
-        </footer>
+      <h1>Iletisim</h1>
+      <p>Bana ulasmak icin e-posta ve sosyal baglantilari kullanabilirsiniz</p>
     </div>
+  </header>
 
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a class="active" href="contact.html">Iletisim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="contact-box">
+      <h2>Iletisim Bilgilerim</h2>
+      <p>E-posta: <a class="email-link" href="mailto:selinyilmaz@example.com">selinyilmaz@example.com</a></p>
+      <p>Telefon: +90 555 000 00 00</p>
+    </section>
+
+    <section class="contact-box">
+      <h2>Sosyal Baglantilar</h2>
+      <ul class="social-links">
+        <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Profilim</a></li>
+        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
+        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram Hesabim</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
