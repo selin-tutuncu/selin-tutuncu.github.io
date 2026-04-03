@@ -3,51 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Lab 2</title>
+  <title>Ozgecmis ve Iletisim Formu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#">Ana Sayfa</a></li>
-      <li><a href="#">Projeler</a></li>
-      <li><a href="#">Duyurular</a></li>
-      <li><a href="#">Iletisim</a></li>
-    </ul>
-  </nav>
-
-  <header class="page-header">
-    <h1>HTML ve CSS Uygulamasi</h1>
-    <p>Bu sayfa temel seciciler, yatay menu ve iki sutunlu duzen kullanilarak hazirlanmistir.</p>
+  <header class="hero">
+    <div class="hero-content">
+      <h1>Selin Yilmaz</h1>
+      <p>Frontend gelistirmeye ilgi duyan web programlama ogrencisi</p>
+    </div>
   </header>
 
-  <main class="layout">
-    <section class="content">
-      <h2>Icerik</h2>
+  <main class="page-content">
+    <section class="cv-card">
+      <h2>Profil</h2>
       <p>
-        Bu bolumde ders kapsaminda ogrenilen temel HTML etiketleri ve CSS ozellikleri kullanilarak yapisal bir duzen kurulmustur.
-        Metinler uzerinde font-size, color, line-height ve text-align gibi ozellikler uygulanmistir.
-      </p>
-      <p>
-        Amac, sade ama duzenli bir sayfa tasarlayarak secicileri ve display mantigini pratikte gostermektir.
-        Bu nedenle ust kisimda yatay bir menu, alt kisimda ise iki sutunlu bir yerlesim bulunur.
+        Temel web teknolojileriyle duzenli, okunabilir ve kullanici odakli arayuzler gelistirmeye calisiyorum.
+        HTML ve CSS konusunda saglam bir temel olusturmak icin laboratuvar calismalarina aktif sekilde devam ediyorum.
       </p>
     </section>
 
-    <aside class="sidebar">
-      <h2>Yan Menu / Bilgi</h2>
-      <p>
-        Sag taraftaki bu kutu ek bilgi alani olarak kullanilmistir.
-        Burada notlar, baglantilar veya odev hakkinda kisa aciklamalar yer alabilir.
-      </p>
-      <p>
-        Hiyerarsik seciciler sayesinde menu baglantilari, icerik paragraflari ve footer metni farkli bicimlerde stillendirilmistir.
-      </p>
-    </aside>
-  </main>
+    <section class="cv-grid">
+      <article class="cv-card">
+        <h2>Egitim</h2>
+        <p>Web Programlama bolumunde HTML, CSS, temel algoritma ve arayuz gelistirme dersleri aliyorum.</p>
+      </article>
 
-  <footer>
-    <p>Hazirlayan: Selin Yilmaz | Web Lab 2 | 2026</p>
-  </footer>
+      <article class="cv-card">
+        <h2>Yetenekler</h2>
+        <p>HTML5, CSS3, temel GitHub kullanimi, sayfa duzeni kurma ve responsive tasarim prensipleri.</p>
+      </article>
+    </section>
+
+    <div class="contact-container">
+      <h2>Iletisim Formu</h2>
+      <form action="#" method="post">
+        <label for="full-name">Ad Soyad</label>
+        <input id="full-name" name="full-name" type="text" placeholder="Adinizi ve soyadinizi giriniz">
+
+        <label for="email">E-posta</label>
+        <input id="email" name="email" type="email" placeholder="ornek@mail.com">
+
+        <label for="subject">Konu</label>
+        <select id="subject" name="subject">
+          <option value="">Lutfen seciniz</option>
+          <option value="is-teklifi">Is Teklifi</option>
+          <option value="soru">Soru</option>
+          <option value="geri-bildirim">Geri Bildirim</option>
+        </select>
+
+        <label for="message">Mesaj</label>
+        <textarea id="message" name="message" rows="6" placeholder="Mesajinizi yaziniz"></textarea>
+
+        <button type="submit">Gonder</button>
+      </form>
+    </div>
+  </main>
 </body>
 </html>
