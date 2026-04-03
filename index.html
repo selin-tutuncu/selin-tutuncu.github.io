@@ -3,61 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozgecmis ve Iletisim Formu</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ana Sayfa | Mini Portfolyo</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
+  <header class="site-header">
+    <div class="container">
       <h1>Selin Yilmaz</h1>
-      <p>Frontend gelistirmeye ilgi duyan web programlama ogrencisi</p>
+      <p>Web Programlama laboratuvar calismalari ve kisisel mini portfolyo sayfasi</p>
     </div>
   </header>
 
-  <main class="page-content">
-    <section class="cv-card">
-      <h2>Profil</h2>
-      <p>
-        Temel web teknolojileriyle duzenli, okunabilir ve kullanici odakli arayuzler gelistirmeye calisiyorum.
-        HTML ve CSS konusunda saglam bir temel olusturmak icin laboratuvar calismalarina aktif sekilde devam ediyorum.
-      </p>
-    </section>
-
-    <section class="cv-grid">
-      <article class="cv-card">
-        <h2>Egitim</h2>
-        <p>Web Programlama bolumunde HTML, CSS, temel algoritma ve arayuz gelistirme dersleri aliyorum.</p>
-      </article>
-
-      <article class="cv-card">
-        <h2>Yetenekler</h2>
-        <p>HTML5, CSS3, temel GitHub kullanimi, sayfa duzeni kurma ve responsive tasarim prensipleri.</p>
-      </article>
-    </section>
-
-    <div class="contact-container">
-      <h2>Iletisim Formu</h2>
-      <form action="#" method="post">
-        <label for="full-name">Ad Soyad</label>
-        <input id="full-name" name="full-name" type="text" placeholder="Adinizi ve soyadinizi giriniz">
-
-        <label for="email">E-posta</label>
-        <input id="email" name="email" type="email" placeholder="ornek@mail.com">
-
-        <label for="subject">Konu</label>
-        <select id="subject" name="subject">
-          <option value="">Lutfen seciniz</option>
-          <option value="is-teklifi">Is Teklifi</option>
-          <option value="soru">Soru</option>
-          <option value="geri-bildirim">Geri Bildirim</option>
-        </select>
-
-        <label for="message">Mesaj</label>
-        <textarea id="message" name="message" rows="6" placeholder="Mesajinizi yaziniz"></textarea>
-
-        <button type="submit">Gonder</button>
-      </form>
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a class="active" href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main class="page-main container">
+    <section class="hero-panel">
+      <h2>Hos Geldiniz</h2>
+      <p>
+        Bu sitede kendimi kisaca tanitiyor, ilgi alanlarimi paylasiyor ve laboratuvar odevlerini
+        duzenli sekilde sunuyorum. GitHub Pages uzerinden yayinlanmaya uygun oldugu icin tum dosyalar
+        statik HTML ve CSS kullanilarak hazirlanmistir.
+      </p>
+      <div class="action-row">
+        <a href="#hizli-baglantilar">Hizli Baglantilara Git</a>
+        <a class="alt" href="about.html">Hakkimda Sayfasini Ac</a>
+      </div>
+    </section>
+
+    <section class="grid-2">
+      <article class="card">
+        <h3>Amac</h3>
+        <p>GitHub uzerinde repo olusturma, dosya yukleme ve statik sayfalari yayinlama becerilerini gostermek.</p>
+      </article>
+      <article class="card">
+        <h3>Icerik</h3>
+        <p>Bu mini portfolyo; ana sayfa, hakkimda, ilgi alanlari ve iletisim bolumlerinden olusmaktadir.</p>
+      </article>
+    </section>
+
+    <section id="hizli-baglantilar" class="panel">
+      <h2>Hizli Baglantilar</h2>
+      <ul class="quick-links">
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim / Hobiler</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+      </ul>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
 </body>
 </html>
