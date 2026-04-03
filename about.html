@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Hakkımda - Selin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkimda | Mini Portfolyo</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Ana Sayfa</a> | <a href="about.html">Hakkımda</a> | 
-        <a href="interests.html">İlgi Alanlarım</a> | <a href="contact.html">İletişim</a>
-    </nav>
+  <header>
+    <div class="container">
+      <h1>Hakkimda</h1>
+      <p>Kisa biyografi, hedefler ve kendimi anlatan notlar</p>
+    </div>
+  </header>
 
-    <h1>Ben Kimim?</h1>
-    <p>Merhaba, ben bir <strong>Bilgisayar Mühendisliği öğrencisiyim.</strong> Web teknolojilerine ilgi duyuyor ve kendimi bu alanda geliştirmeyi hedefliyorum.</p>
-    
-    <p>Özellikle <em>frontend geliştirme</em> ve kullanıcı deneyimi konularında çalışmalar yapmayı seviyorum.</p>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a class="active" href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <blockquote>
-        "İyi yazılmış bir web sitesi, hem kullanıcıyı hem geliştiriciyi mutlu eder."
-    </blockquote>
+  <main class="container">
+    <section class="card">
+      <p>
+        Ben <strong>Selin Yilmaz</strong>. Web teknolojilerine ilgi duyan ve surekli ogrenen bir ogrenciyim.
+        Derslerde ogrendigim teorik bilgileri kucuk projelerle pekistirmeyi seviyorum.
+      </p>
+      <p>
+        Ozellikle <em>duzenli kod yazma</em>, temiz sayfa yapisi kurma ve kullanici dostu arayuzler olusturma konulari ilgimi cekiyor.
+        Bu nedenle HTML ve CSS temellerini saglamlastirmaya odaklaniyorum.
+      </p>
+      <p>
+        Uzun vadede hem teknik hem de tasarimsal acidan guclu web projeleri gelistiren bir yazilimci olmak istiyorum.
+      </p>
+    </section>
 
-    <h2>Eğitim Bilgilerim</h2>
-    <ul>
-        <li>Marmara Üniversitesi</li>
-        <li>Bilgisayar Mühendisliği</li>
-        <li>Web Programlama dersi</li>
-    </ul>
+    <section class="quote-box">
+      <h2>Ilham Aldigim Bir Soz</h2>
+      <blockquote>
+        Basari, her gun tekrar edilen kucuk cabalarin toplamidir.
+      </blockquote>
+    </section>
 
-    <p><a href="index.html">← Ana sayfaya geri dön</a></p>
+    <section class="timeline">
+      <h2>Zaman Cizelgesi</h2>
+      <ul>
+        <li>Egitim: Web programlama ve temel arayuz gelistirme dersleri</li>
+        <li>Kisa Vadeli Hedef: HTML, CSS ve JavaScript konularini daha ileri seviyeye tasimak</li>
+        <li>Orta Vadeli Hedef: Kendi portfolyo sitemi gelistirmek</li>
+        <li>Uzun Vadeli Hedef: Profesyonel frontend projelerinde aktif rol almak</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
