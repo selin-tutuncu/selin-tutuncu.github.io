@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İlgi Alanlarım - Selin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ilgi Alanlarim | Mini Portfolyo</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <nav>
-        <a href="index.html">Ana Sayfa</a> | <a href="about.html">Hakkımda</a> | 
-        <a href="interests.html">İlgi Alanlarım</a> | <a href="contact.html">İletişim</a>
-    </nav>
+  <header>
+    <div class="container">
+      <h1>Ilgi Alanlarim ve Hobilerim</h1>
+      <p>Liste etiketleri kullanilarak hazirlanmis sayfa</p>
+    </div>
+  </header>
 
-    <h1>Teknoloji Alanındaki İlgi Alanlarım</h1>
-    <ul>
-        <li>Web Geliştirme</li>
-        <li>Veri Bilimi</li>
-        <li>DevOps</li>
-        <li>Öğrenmek istediğim teknolojiler:
-            <ul>
-                <li>React</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-            </ul>
-        </li>
-    </ul>
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a class="active" href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <h2>Günlük Çalışma Rutinim</h2>
-    <ol>
-        <li>Ders materyallerini gözden geçirmek</li>
-        <li>Kodlama pratiği yapmak</li>
-        <li>Yeni teknolojiler araştırmak</li>
-    </ol>
+  <main class="container">
+    <section class="grid-2">
+      <article class="card">
+        <h2>Sevdigim Etkinlikler</h2>
+        <ul class="interest-list">
+          <li>Yeni web teknolojilerini arastirmak</li>
+          <li>Arayuz tasarim denemeleri yapmak</li>
+          <li>Kitap okumak</li>
+          <li>Film ve belgesel izlemek</li>
+        </ul>
+      </article>
 
-    <h2>Web Teknolojileri Sözlüğü</h2>
-    <dl>
-        <dt>HTML</dt>
-        <dd>Web sayfalarının iskeletini oluşturan işaretleme dilidir.</dd>
-        <dt>CSS</dt>
-        <dd>Web sayfalarının görsel tasarımını düzenlemek için kullanılır.</dd>
-    </dl>
+      <article class="card">
+        <h2>Gunluk Onceliklerim</h2>
+        <ol class="interest-list">
+          <li>Ders notlarini tekrar etmek</li>
+          <li>Kucuk uygulamalar gelistirmek</li>
+          <li>Yeni tasarim fikirleri toplamak</li>
+        </ol>
+      </article>
+    </section>
 
-    <p><a href="index.html">← Ana sayfaya geri dön</a></p>
+    <section class="card">
+      <h2>Terim Sozlugu</h2>
+      <dl class="interest-list">
+        <dt>Frontend</dt>
+        <dd>Kullanicinin gordugu arayuzun gelistirilmesi surecidir.</dd>
+        <dt>Responsive Tasarim</dt>
+        <dd>Sayfanin farkli ekran boyutlarina uyum saglamasidir.</dd>
+        <dt>GitHub Pages</dt>
+        <dd>Statik siteleri ucretsiz yayinlamayi saglayan GitHub hizmetidir.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
