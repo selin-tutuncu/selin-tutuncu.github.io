@@ -5,198 +5,107 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f3ed;
+  background-color: #eef2f7;
   color: #1f2937;
 }
 
-.wrapper {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+h1,
+h2,
+p {
+  margin-top: 0;
 }
 
-.navbar {
-  height: 10vh;
-  min-height: 72px;
-  padding: 0 4vw;
-  background-color: #13293d;
-  color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav {
+  background-color: #1d3557;
+  text-align: center;
 }
 
-.logo {
-  font-size: 1.4rem;
-  font-weight: bold;
+nav ul {
+  margin: 0;
+  padding: 14px 0;
+  list-style: none;
 }
 
-.nav-links {
-  display: flex;
-  gap: 18px;
+nav ul li {
+  display: inline-block;
+  margin: 0 12px;
 }
 
-.nav-links a {
+nav a {
   color: #ffffff;
   text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 6px;
 }
 
-.hero {
-  height: 30vh;
-  min-height: 220px;
-  padding: 2vh 4vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 20px;
-  background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+nav a:hover {
+  background-color: #457b9d;
 }
 
-.hero-text,
-.hero-visual {
-  flex: 1;
-  border-radius: 16px;
-}
-
-.hero-text {
+.page-header {
+  width: min(1000px, 92%);
+  margin: 24px auto;
   background-color: #ffffff;
+  padding: 28px;
+  border-radius: 14px;
+}
+
+.layout {
+  width: min(1000px, 92%);
+  margin: 0 auto 24px;
+  display: inline-block;
+  width: 100%;
+}
+
+.content,
+.sidebar {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #ffffff;
+  border-radius: 14px;
   padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
-.hero-text h1 {
-  margin-top: 0;
-  margin-bottom: 12px;
+.content {
+  width: 66%;
+  margin-right: 2%;
 }
 
-.hero-text button {
-  width: fit-content;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  background-color: #2563eb;
-  color: white;
-  cursor: pointer;
+.sidebar {
+  width: 32%;
 }
 
-.hero-visual {
-  background: repeating-linear-gradient(
-    45deg,
-    #0f766e,
-    #0f766e 14px,
-    #14b8a6 14px,
-    #14b8a6 28px
-  );
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.content p {
+  font-size: 17px;
+  color: #334155;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.sidebar p {
+  font-size: 16px;
+  color: #475569;
+  line-height: 1.7;
+  text-align: left;
+}
+
+footer p {
+  text-align: center;
   color: #ffffff;
-  font-size: 1.3rem;
-  font-weight: bold;
+  line-height: 1.6;
 }
 
-.cards-section {
-  height: 30vh;
-  min-height: 220px;
-  padding: 2vh 4vw;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-content: center;
-  justify-content: center;
-  background-color: #fff7ed;
-}
-
-.card {
-  min-width: 150px;
-  flex: 1 1 28%;
-  background-color: #ffffff;
-  border: 1px solid #fed7aa;
-  border-radius: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  color: #9a3412;
-}
-
-.growth-section {
-  height: 20vh;
-  min-height: 140px;
-  padding: 2vh 4vw;
-  display: flex;
-  align-items: stretch;
-  gap: 14px;
-  background-color: #eff6ff;
-}
-
-.grow-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 14px;
-  color: #ffffff;
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.box-one {
-  flex-grow: 1;
-  background-color: #3b82f6;
-}
-
-.box-two {
-  flex-grow: 2;
-  background-color: #1d4ed8;
-}
-
-.box-three {
-  flex-grow: 1;
-  background-color: #60a5fa;
-}
-
-.footer {
-  height: 10vh;
-  min-height: 72px;
-  background-color: #13293d;
-  color: #ffffff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+footer {
+  background-color: #1d3557;
+  padding: 18px;
 }
 
 @media (max-width: 768px) {
-  .navbar,
-  .hero,
-  .growth-section {
-    height: auto;
-  }
-
-  .navbar {
-    flex-direction: column;
-    justify-content: center;
-    padding: 20px;
-    gap: 10px;
-  }
-
-  .hero {
-    flex-direction: column;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .cards-section {
-    height: auto;
-    padding-bottom: 24px;
-  }
-
-  .growth-section {
-    flex-direction: column;
+  .content,
+  .sidebar {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
   }
 }
