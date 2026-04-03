@@ -1,1 +1,90 @@
-<h1> merhaba selin </h1>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selin | Ozgecmis ve Iletisim Formu</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Selin Yilmaz</h1>
+      <p>Ozgecmis sayfasi ve en altta iletisim formu</p>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <div class="container">
+      <ul>
+        <li><a href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+        <li><a class="active" href="selin.html">CV Formu</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="cv-page">
+    <section class="cv-card">
+      <h2>Profil</h2>
+      <p>
+        Temel web teknolojileri ile duzenli, okunabilir ve kullanici odakli sayfalar gelistirmeye odaklaniyorum.
+        Laboratuvar calismalari sayesinde hem yapisal HTML kullanimimi hem de CSS duzenleme becerilerimi guclendiriyorum.
+      </p>
+    </section>
+
+    <section class="cv-grid">
+      <article class="cv-card">
+        <h2>Egitim</h2>
+        <p>Web programlama ve arayuz tasarimi odakli dersler aliyor, uygulamali odevlerle bilgilerimi pekistiriyorum.</p>
+      </article>
+      <article class="cv-card">
+        <h2>Yetenekler</h2>
+        <p>HTML5, CSS3, temel GitHub kullanimi, semantik etiketler, sayfa duzeni ve temel responsive tasarim.</p>
+      </article>
+    </section>
+
+    <section class="cv-grid">
+      <article class="cv-card">
+        <h2>Deneyim</h2>
+        <p>Kucuk laboratuvar odevleri, mini portfolyo sayfalari ve temel arayuz denemeleri gelistiriyorum.</p>
+      </article>
+      <article class="cv-card">
+        <h2>Hedefler</h2>
+        <p>Temiz kod yazma, responsive tasarim kurma ve modern arayuz mantigini daha ileri seviyeye tasimak istiyorum.</p>
+      </article>
+    </section>
+
+    <div class="contact-container">
+      <h2>Iletisim Formu</h2>
+      <p>Benimle iletisime gecmek icin asagidaki formu doldurabilirsiniz.</p>
+      <form action="#" method="post">
+        <label for="full-name">Ad Soyad</label>
+        <input id="full-name" name="full-name" type="text" placeholder="Adinizi ve soyadinizi giriniz">
+
+        <label for="email">E-posta</label>
+        <input id="email" name="email" type="email" placeholder="ornek@mail.com">
+
+        <label for="subject">Konu</label>
+        <select id="subject" name="subject">
+          <option value="">Lutfen seciniz</option>
+          <option value="is-teklifi">Is Teklifi</option>
+          <option value="soru">Soru</option>
+          <option value="geri-bildirim">Geri Bildirim</option>
+        </select>
+
+        <label for="message">Mesaj</label>
+        <textarea id="message" name="message" rows="6" placeholder="Mesajinizi yaziniz"></textarea>
+
+        <button type="submit">Gonder</button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
+</body>
+</html>
