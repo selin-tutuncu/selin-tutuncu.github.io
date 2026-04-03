@@ -3,18 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ilgi Alanlarim | Mini Portfolyo</title>
+  <title>Ilgi Alanlarim</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <header>
+  <header class="site-header">
     <div class="container">
-      <h1>Ilgi Alanlarim ve Hobilerim</h1>
-      <p>Liste etiketleri kullanilarak hazirlanmis sayfa</p>
+      <h1>Ilgi Alanlarim / Hobilerim</h1>
+      <p>Liste kullanimi odakli sayfa: ul, ol ve dl</p>
     </div>
   </header>
 
-  <nav>
+  <nav class="main-nav">
     <div class="container">
       <ul>
         <li><a href="index.html">Ana Sayfa</a></li>
@@ -25,44 +25,43 @@
     </div>
   </nav>
 
-  <main class="container">
+  <main class="page-main container">
     <section class="grid-2">
       <article class="card">
         <h2>Sevdigim Etkinlikler</h2>
         <ul class="interest-list">
-          <li>Yeni web teknolojilerini arastirmak</li>
+          <li>Yeni teknolojiler arastirmak</li>
           <li>Arayuz tasarim denemeleri yapmak</li>
           <li>Kitap okumak</li>
-          <li>Film ve belgesel izlemek</li>
+          <li>Belgesel izlemek</li>
         </ul>
       </article>
 
       <article class="card">
-        <h2>Gunluk Onceliklerim</h2>
+        <h2>Gunluk Siralamam</h2>
         <ol class="interest-list">
           <li>Ders notlarini tekrar etmek</li>
-          <li>Kucuk uygulamalar gelistirmek</li>
-          <li>Yeni tasarim fikirleri toplamak</li>
+          <li>Kod yazma pratigi yapmak</li>
+          <li>Ornek web sayfalarini incelemek</li>
         </ol>
       </article>
     </section>
 
-    <section class="card">
-      <h2>Terim Sozlugu</h2>
+    <section class="panel">
+      <h2>Kisa Terim Sozlugu</h2>
       <dl class="interest-list">
-        <dt>Frontend</dt>
-        <dd>Kullanicinin gordugu arayuzun gelistirilmesi surecidir.</dd>
-        <dt>Responsive Tasarim</dt>
-        <dd>Sayfanin farkli ekran boyutlarina uyum saglamasidir.</dd>
+        <dt>HTML</dt>
+        <dd>Web sayfasinin yapisini olusturan isaretleme dilidir.</dd>
+        <dt>CSS</dt>
+        <dd>Sayfanin renk, bosluk, yazi ve genel gorunum ozelliklerini duzenler.</dd>
         <dt>GitHub Pages</dt>
-        <dd>Statik siteleri ucretsiz yayinlamayi saglayan GitHub hizmetidir.</dd>
+        <dd>Statik siteleri internet ortaminda ucretsiz yayinlamayi saglayan platformdur.</dd>
       </dl>
     </section>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <p>Selin Yilmaz | Web Programlama | 2026</p>
   </footer>
-  <script src="scripts/app.js"></script>
 </body>
 </html>
