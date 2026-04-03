@@ -3,52 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Flexbox Uygulamasi</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Ana Sayfa | Mini Portfolyo</title>
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <nav class="navbar">
-      <div class="logo">FlexLab</div>
-      <div class="nav-links">
-        <a href="#">Ana Sayfa</a>
-        <a href="#">Hizmetler</a>
-        <a href="#">Projeler</a>
-        <a href="#">Iletisim</a>
-      </div>
-    </nav>
+  <header>
+    <div class="container">
+      <h1>Selin Yilmaz</h1>
+      <p>Web Programlama ogrencisi | Mini portfolyo ve laboratuvar calismalari</p>
+    </div>
+  </header>
 
+  <nav>
+    <div class="container">
+      <ul>
+        <li><a class="active" href="index.html">Ana Sayfa</a></li>
+        <li><a href="about.html">Hakkimda</a></li>
+        <li><a href="interests.html">Ilgi Alanlarim</a></li>
+        <li><a href="contact.html">Iletisim</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
     <section class="hero">
-      <div class="hero-text">
-        <h1>Flexbox ile Guclu Yerlesim</h1>
-        <p>
-          Bu bolumde iki kolonlu yapi, hizalama ve esneyebilen alanlar birlikte kullanilmistir.
-        </p>
-        <button>Daha Fazla Incele</button>
+      <h2>Hos Geldiniz</h2>
+      <p>
+        Bu sayfada kendimi kisaca tanitiyor, ilgilendigim alanlari paylasiyor ve iletisim bilgilerimi sunuyorum.
+        Amacim web tasarim ve yazilim gelisim yolculugumda yaptigim temel calismalari duzenli bir sekilde gostermektir.
+      </p>
+      <div class="button-row">
+        <a href="#hizli-baglantilar">Hizli Baglantilara Git</a>
+        <a class="secondary" href="about.html">Beni Daha Yakindan Tani</a>
       </div>
-      <div class="hero-visual">
-        <span>Gorsel Kutusu</span>
-      </div>
     </section>
 
-    <section class="cards-section">
-      <article class="card">Kart 1</article>
-      <article class="card">Kart 2</article>
-      <article class="card">Kart 3</article>
-      <article class="card">Kart 4</article>
-      <article class="card">Kart 5</article>
-      <article class="card">Kart 6</article>
+    <section class="grid-2">
+      <article class="card">
+        <h3>Hedeflerim</h3>
+        <p>Frontend gelistirme, arayuz tasarimi ve kullanici deneyimi alanlarinda kendimi gelistirmek istiyorum.</p>
+      </article>
+      <article class="card">
+        <h3>Calisma Alanlarim</h3>
+        <p>HTML, CSS, temel JavaScript, responsive tasarim ve GitHub Pages kullanimi uzerinde calisiyorum.</p>
+      </article>
     </section>
 
-    <section class="growth-section">
-      <div class="grow-box box-one">Flex 1</div>
-      <div class="grow-box box-two">Flex 2</div>
-      <div class="grow-box box-three">Flex 1</div>
+    <section id="hizli-baglantilar" class="card">
+      <h2>Hizli Baglantilar</h2>
+      <ul class="quick-links">
+        <li><a href="about.html">Hakkimda sayfasina git</a></li>
+        <li><a href="interests.html">Hobilerimi ve ilgi alanlarimi incele</a></li>
+        <li><a href="contact.html">Iletisim bilgilerime ulas</a></li>
+      </ul>
     </section>
+  </main>
 
-    <footer class="footer">
-      <p>Flexbox laboratuvar uygulamasi</p>
-    </footer>
-  </div>
+  <footer>
+    <p>Selin Yilmaz | Web Programlama | 2026</p>
+  </footer>
+  <script src="scripts/app.js"></script>
 </body>
 </html>
