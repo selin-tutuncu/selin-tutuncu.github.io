@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ana Sayfa | Mini Portfolyo ve Flexbox</title>
+  <title>Ana Sayfa | Mini Portfolyo</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container">
       <h1>Selin Yilmaz</h1>
-      <p>Web Programlama laboratuvar calismalari, mini portfolyo ve flexbox uygulamasi</p>
+      <p>Web Programlama laboratuvar calismalari ve kisisel mini portfolyo sayfasi</p>
     </div>
   </header>
 
@@ -29,192 +29,135 @@
     <section class="hero-panel">
       <h2>Hos Geldiniz</h2>
       <p>
-        Bu sitede kendimi kisaca tanitiyor, ilgi alanlarimi paylasiyor, GitHub Pages icin uygun bir mini portfolyo
-        yapiyor ve flexbox laboratuvar uygulamasini tek sayfa icinde sunuyorum.
+        Bu sitede kendimi kisaca tanitiyor, ilgi alanlarimi paylasiyor ve laboratuvar odevlerini tek bir yapi
+        altinda duzenli sekilde sunuyorum. GitHub Pages uzerinden yayinlanmaya uygun oldugu icin tum dosyalar
+        statik HTML ve CSS ile hazirlanmistir.
       </p>
       <div class="action-row">
-        <a href="#flex-uygulama">Flexbox Bolumune Git</a>
-        <a class="alt" href="contact.html">Iletisim Formunu Ac</a>
+        <a href="#flex-uygulama">Flexbox Uygulamasini Incele</a>
+        <a class="alt" href="contact.html">Detayli Formu Ac</a>
       </div>
     </section>
 
     <section class="grid-2">
       <article class="card">
         <h3>Amac</h3>
-        <p>HTML, CSS, GitHub Pages, liste kullanimi, semantik yapi ve flexbox konularini uygulamali gostermek.</p>
+        <p>GitHub uzerinde repo olusturma, dosya yukleme ve statik sayfalari yayinlama becerilerini gostermek.</p>
       </article>
       <article class="card">
         <h3>Icerik</h3>
-        <p>Ana sayfa, hakkimda, ilgi alanlari, iletisim ve detayli form bolumleri ile eksiksiz bir laboratuvar calismasi.</p>
+        <p>Mini portfolyo sayfalari, liste yapilari, modern bir tanitim alani ve detayli iletisim formu ayni yapida sunulmaktadir.</p>
       </article>
     </section>
 
-    <section id="flex-uygulama" class="flex-demo-wrapper">
-      <div class="flex-navbar-box">
-        <div class="flex-demo-logo">LOGO</div>
-        <div class="flex-demo-links">
-          <a href="index.html">Ana Sayfa</a>
-          <a href="about.html">Hakkinda</a>
-          <a href="interests.html">Dersler</a>
-          <a href="contact.html">Iletisim</a>
+    <section id="flex-uygulama" class="panel panel-wide">
+      <div class="section-intro">
+        <span class="eyebrow">Flexbox Laboratuvari</span>
+        <h2>Modern Flexbox Gosterimi</h2>
+        <p>
+          Dokumandaki navbar, hero, kartlar, flex-grow ve footer bolumlerini tek bir modern blokta yeniden duzenledim.
+          Burada hem flex kurallari gorunuyor hem de arayuz daha sade ve guncel duruyor.
+        </p>
+      </div>
+
+      <div class="flex-showcase">
+        <div class="showcase-nav">
+          <div class="showcase-logo">SelinLab</div>
+          <div class="showcase-links">
+            <a href="index.html">Ana Sayfa</a>
+            <a href="about.html">Hakkinda</a>
+            <a href="interests.html">Dersler</a>
+            <a href="contact.html">Iletisim</a>
+          </div>
         </div>
-      </div>
 
-      <div class="tag-row">
-        <span>flex layout</span>
-        <span>justify-content</span>
-        <span>flex layout</span>
-        <span>10vh height</span>
-        <span>100vh height</span>
-        <span>100vw width</span>
-      </div>
+        <div class="pill-row">
+          <span>100vh wrapper</span>
+          <span>10vh navbar</span>
+          <span>30vh hero</span>
+          <span>30vh kartlar</span>
+          <span>20vh flex-grow</span>
+          <span>10vh footer</span>
+        </div>
 
-      <section class="flex-card">
-        <div class="flex-hero-demo">
-          <div class="flex-hero-text">
-            <h2>Hero Baslik</h2>
-            <p>Aciklama metni</p>
-            <div class="line"></div>
-            <div class="line short"></div>
+        <div class="showcase-hero">
+          <div class="showcase-copy">
+            <h3>Hero Baslik</h3>
+            <p>Yatay yerlesim, esneyen kolonlar ve temiz bir tanitim alani.</p>
+            <div class="ghost-line"></div>
+            <div class="ghost-line short"></div>
             <button type="button">Buton</button>
           </div>
-          <div class="flex-hero-image">
-            <div class="image-placeholder">Gorsel Alani</div>
+          <div class="showcase-art">
+            <div class="art-box">Gorsel</div>
           </div>
         </div>
-        <div class="tag-row">
+
+        <div class="pill-row">
           <span>flex-direction: row</span>
-          <span>height: 30vh</span>
+          <span>justify-content: space-between</span>
           <span>align-items: stretch</span>
         </div>
-      </section>
 
-      <section class="flex-card">
-        <div class="section-head">
-          <h2>Kartlar Bolumu</h2>
-          <div class="mini-tags">
-            <span>multiple items</span>
-            <span>flex layout + wrap</span>
-          </div>
-        </div>
-
-        <div class="demo-cards">
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+        <div class="showcase-cards">
+          <article class="showcase-card">
+            <h4>Kart 1</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+          <article class="showcase-card">
+            <h4>Kart 2</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+          <article class="showcase-card">
+            <h4>Kart 3</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+          <article class="showcase-card">
+            <h4>Kart 4</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+          <article class="showcase-card">
+            <h4>Kart 5</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
-          <article class="demo-item">
-            <h3>Kart Basligi</h3>
+          <article class="showcase-card">
+            <h4>Kart 6</h4>
             <p>Kisa aciklama</p>
-            <div class="line short"></div>
-            <button type="button">Buton</button>
           </article>
         </div>
 
-        <div class="tag-row">
-          <span>flex-direction</span>
-          <span>flex layout + wrap</span>
-          <span>gap + align/hizalama</span>
-          <span>height: 30vh</span>
-        </div>
-      </section>
-
-      <section class="flex-card">
-        <div class="section-head">
-          <h2>Flex Grow Uygulama</h2>
-          <div class="mini-tags">
-            <span>flex-grow</span>
-            <span>height: 20vh</span>
-            <span>stretch (esneme)</span>
-          </div>
-        </div>
-
-        <div class="grow-demo">
-          <div class="grow-demo-box blue-box">
-            <h3>1 Kutu</h3>
-            <p>flex-grow: 1;</p>
-            <button type="button">Buton</button>
-          </div>
-          <div class="grow-demo-box green-box grow-two-box">
-            <h3>2 Kutu</h3>
-            <p>flex-grow: 2;</p>
-            <button type="button">Buton</button>
-          </div>
-          <div class="grow-demo-box orange-box">
-            <h3>3 Kutu</h3>
-            <p>flex-grow: 1;</p>
-            <button type="button">Buton</button>
-          </div>
-        </div>
-
-        <div class="tag-row">
+        <div class="pill-row">
+          <span>flex-wrap</span>
           <span>multiple items</span>
-          <span>flex layout + wrap</span>
-          <span>gap + align/hizalama</span>
-        </div>
-      </section>
-
-      <section class="flex-card">
-        <div class="section-head">
-          <h2>Flex Grow Uygulama</h2>
-          <div class="mini-tags">
-            <span>flex-grow: 1</span>
-            <span>height: 20vh</span>
-            <span>stretch (esneme)</span>
-          </div>
+          <span>gap kullanimi</span>
+          <span>align-content</span>
         </div>
 
-        <div class="grow-demo">
-          <div class="grow-demo-box blue-box">
-            <h3>1 Kutu</h3>
-            <p>flex-grow: 1;</p>
+        <div class="showcase-grow">
+          <div class="grow-card grow-a">
+            <h4>1 Kutu</h4>
+            <p>flex-grow: 1</p>
           </div>
-          <div class="grow-demo-box green-box grow-two-box">
-            <h3>2 Kutu</h3>
-            <p>flex-grow: 2;</p>
+          <div class="grow-card grow-b">
+            <h4>2 Kutu</h4>
+            <p>flex-grow: 2</p>
           </div>
-          <div class="grow-demo-box orange-box">
-            <h3>3 Kutu</h3>
-            <p>flex-grow: 1;</p>
+          <div class="grow-card grow-c">
+            <h4>3 Kutu</h4>
+            <p>flex-grow: 1</p>
           </div>
         </div>
 
-        <div class="tag-row">
-          <span>flex-grow</span>
+        <div class="pill-row">
+          <span>flex-grow 1-2-1</span>
           <span>height: 20vh</span>
-          <span>stretch (esneme)</span>
+          <span>stretch davranisi</span>
         </div>
-      </section>
 
-      <footer class="flex-demo-footer">
-        <p>&copy; 2026 - Temel Flexbox Ornegi</p>
-      </footer>
+        <div class="showcase-footer">
+          <p>&copy; 2026 - Temel Flexbox Ornegi</p>
+        </div>
+      </div>
     </section>
   </main>
 
