@@ -26,48 +26,55 @@
   </nav>
 
   <main class="page-main container">
-    <section class="panel">
-      <h2>Iletisim Bilgileri</h2>
-      <p>E-posta: <a class="email-link" href="mailto:selinyilmaz@example.com">selinyilmaz@example.com</a></p>
-      <p>Telefon: +90 555 000 00 00</p>
-      <p>Adres: Istanbul, Turkiye</p>
+    <section class="contact-top-grid">
+      <article class="card">
+        <h2>Iletisim Bilgileri</h2>
+        <p>E-posta: <a class="email-link" href="mailto:selinyilmaz@example.com">selinyilmaz@example.com</a></p>
+        <p>Telefon: +90 555 000 00 00</p>
+        <p>Adres: Istanbul, Turkiye</p>
+      </article>
+
+      <article class="card">
+        <h2>Sosyal Baglantilar</h2>
+        <ul class="social-list">
+          <li><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub Profilim</a></li>
+          <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn Profilim</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram Hesabim</a></li>
+        </ul>
+      </article>
     </section>
 
-    <section class="panel">
-      <h2>Sosyal Baglantilar</h2>
-      <ul class="social-list">
-        <li><a href="https://github.com/" target="_blank">GitHub Profilim</a></li>
-        <li><a href="https://www.linkedin.com/" target="_blank">LinkedIn Profilim</a></li>
-        <li><a href="https://www.instagram.com/" target="_blank">Instagram Hesabim</a></li>
-      </ul>
-    </section>
+    <section class="contact-container contact-form-modern">
+      <div class="section-intro center">
+        <span class="eyebrow">Lab 3</span>
+        <h2>Detayli Iletisim Formu</h2>
+        <p>Ozgecmis sayfasinin altina eklenen profesyonel gorunumlu formun modernlestirilmis hali.</p>
+      </div>
 
-    <section class="contact-container">
-      <h2>Detayli Iletisim Formu</h2>
       <form action="#" method="post" enctype="multipart/form-data">
-        <label for="adsoyad">Ad Soyad:</label>
-        <input type="text" id="adsoyad" name="adsoyad" placeholder="Orn: Asaf Karatas">
+        <label for="adsoyad">Ad Soyad</label>
+        <input type="text" id="adsoyad" name="adsoyad" placeholder="Orn: Selin Yilmaz">
 
-        <label for="email">E-posta Adresi:</label>
+        <label for="email">E-posta Adresi</label>
         <input type="email" id="email" name="email" placeholder="ornek@mail.com">
 
-        <label for="sifre">Basvuru Takip Sifresi:</label>
+        <label for="sifre">Basvuru Takip Sifresi</label>
         <input type="password" id="sifre" name="sifre" placeholder="Sifrenizi girin">
 
         <fieldset class="form-group">
-          <legend>Iletisim Tercihi:</legend>
+          <legend>Iletisim Tercihi</legend>
           <label class="option-label"><input type="radio" name="iletisimtercihi" value="eposta" checked> Bana e-posta ile ulasin</label>
           <label class="option-label"><input type="radio" name="iletisimtercihi" value="telefon"> Bana telefonla ulasin</label>
         </fieldset>
 
         <fieldset class="form-group">
-          <legend>Ilgi Alanlari / Yetenekler:</legend>
+          <legend>Ilgi Alanlari / Yetenekler</legend>
           <label class="option-label"><input type="checkbox" name="yetenek" value="html"> HTML</label>
           <label class="option-label"><input type="checkbox" name="yetenek" value="css"> CSS</label>
           <label class="option-label"><input type="checkbox" name="yetenek" value="algoritma"> Algoritma</label>
         </fieldset>
 
-        <label for="konu">Konu:</label>
+        <label for="konu">Konu</label>
         <select id="konu" name="konu">
           <option value="">Lutfen bir konu secin...</option>
           <option value="is-teklifi">Is Teklifi</option>
@@ -75,10 +82,10 @@
           <option value="geri-bildirim">Geri Bildirim</option>
         </select>
 
-        <label for="dosya">Ozgecmis (CV) veya Fotograf Yukle:</label>
+        <label for="dosya">Ozgecmis (CV) veya Fotograf Yukle</label>
         <input type="file" id="dosya" name="dosya">
 
-        <label for="mesaj">Mesajiniz:</label>
+        <label for="mesaj">Mesajiniz</label>
         <textarea id="mesaj" name="mesaj" rows="6" placeholder="Detayli mesajinizi buraya yazabilirsiniz..."></textarea>
 
         <div class="button-group">
