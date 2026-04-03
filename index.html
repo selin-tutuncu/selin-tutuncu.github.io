@@ -3,65 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ana Sayfa | Mini Portfolyo</title>
-  <link rel="stylesheet" href="styles/style.css">
+  <title>Web Lab 2</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Selin Yilmaz</h1>
-      <p>Web Programlama ogrencisi | Mini portfolyo ve laboratuvar calismalari</p>
-    </div>
-  </header>
-
   <nav>
-    <div class="container">
-      <ul>
-        <li><a class="active" href="index.html">Ana Sayfa</a></li>
-        <li><a href="about.html">Hakkimda</a></li>
-        <li><a href="interests.html">Ilgi Alanlarim</a></li>
-        <li><a href="contact.html">Iletisim</a></li>
-      </ul>
-    </div>
+    <ul>
+      <li><a href="#">Ana Sayfa</a></li>
+      <li><a href="#">Projeler</a></li>
+      <li><a href="#">Duyurular</a></li>
+      <li><a href="#">Iletisim</a></li>
+    </ul>
   </nav>
 
-  <main class="container">
-    <section class="hero">
-      <h2>Hos Geldiniz</h2>
+  <header class="page-header">
+    <h1>HTML ve CSS Uygulamasi</h1>
+    <p>Bu sayfa temel seciciler, yatay menu ve iki sutunlu duzen kullanilarak hazirlanmistir.</p>
+  </header>
+
+  <main class="layout">
+    <section class="content">
+      <h2>Icerik</h2>
       <p>
-        Bu sayfada kendimi kisaca tanitiyor, ilgilendigim alanlari paylasiyor ve iletisim bilgilerimi sunuyorum.
-        Amacim web tasarim ve yazilim gelisim yolculugumda yaptigim temel calismalari duzenli bir sekilde gostermektir.
+        Bu bolumde ders kapsaminda ogrenilen temel HTML etiketleri ve CSS ozellikleri kullanilarak yapisal bir duzen kurulmustur.
+        Metinler uzerinde font-size, color, line-height ve text-align gibi ozellikler uygulanmistir.
       </p>
-      <div class="button-row">
-        <a href="#hizli-baglantilar">Hizli Baglantilara Git</a>
-        <a class="secondary" href="about.html">Beni Daha Yakindan Tani</a>
-      </div>
+      <p>
+        Amac, sade ama duzenli bir sayfa tasarlayarak secicileri ve display mantigini pratikte gostermektir.
+        Bu nedenle ust kisimda yatay bir menu, alt kisimda ise iki sutunlu bir yerlesim bulunur.
+      </p>
     </section>
 
-    <section class="grid-2">
-      <article class="card">
-        <h3>Hedeflerim</h3>
-        <p>Frontend gelistirme, arayuz tasarimi ve kullanici deneyimi alanlarinda kendimi gelistirmek istiyorum.</p>
-      </article>
-      <article class="card">
-        <h3>Calisma Alanlarim</h3>
-        <p>HTML, CSS, temel JavaScript, responsive tasarim ve GitHub Pages kullanimi uzerinde calisiyorum.</p>
-      </article>
-    </section>
-
-    <section id="hizli-baglantilar" class="card">
-      <h2>Hizli Baglantilar</h2>
-      <ul class="quick-links">
-        <li><a href="about.html">Hakkimda sayfasina git</a></li>
-        <li><a href="interests.html">Hobilerimi ve ilgi alanlarimi incele</a></li>
-        <li><a href="contact.html">Iletisim bilgilerime ulas</a></li>
-      </ul>
-    </section>
+    <aside class="sidebar">
+      <h2>Yan Menu / Bilgi</h2>
+      <p>
+        Sag taraftaki bu kutu ek bilgi alani olarak kullanilmistir.
+        Burada notlar, baglantilar veya odev hakkinda kisa aciklamalar yer alabilir.
+      </p>
+      <p>
+        Hiyerarsik seciciler sayesinde menu baglantilari, icerik paragraflari ve footer metni farkli bicimlerde stillendirilmistir.
+      </p>
+    </aside>
   </main>
 
   <footer>
-    <p>Selin Yilmaz | Web Programlama | 2026</p>
+    <p>Hazirlayan: Selin Yilmaz | Web Lab 2 | 2026</p>
   </footer>
-  <script src="scripts/app.js"></script>
 </body>
 </html>
