@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafta 6.1 – Not Hesaplama | Selin TUTUNCU</title>
+<link rel="stylesheet" href="styles/style.css">
+<style>
+  /* ===== Sitenin genel stiline ek, sadece bu sayfaya özel ===== */
+  .lab-header {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    color: #fff;
+    padding: 32px 40px 24px;
+  }
+  .lab-header h1 { font-size: 2rem; font-weight: 700; margin: 0 0 6px; }
+  .lab-header p  { font-size: 0.95rem; opacity: 0.85; margin: 0; }
+
+  .back-btn {
+    display: inline-block;
+    margin: 24px 40px 0;
+    padding: 8px 20px;
+    background: #fff;
+    color: #3949ab;
+    border: 1.5px solid #3949ab;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .back-btn:hover { background: #3949ab; color: #fff; }
+
+  .lab-body { max-width: 520px; margin: 32px auto 60px; padding: 0 20px; }
+
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px;
+  }
+  .card h2 { font-size: 1.3rem; font-weight: 700; color: #1a237e; margin: 0 0 24px; }
+
+  .field { margin-bottom: 18px; }
+  .field label { display: block; font-size: 0.85rem; color: #555; margin-bottom: 5px; font-weight: 500; }
+  .field input {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 14px;
+    border: 1.5px solid #dde3f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border 0.2s;
+  }
+  .field input:focus { border-color: #3949ab; }
+  .err { color: #c62828; font-size: 0.8rem; margin-top: 4px; display: none; }
+
+  .calc-btn {
+    width: 100%;
+    padding: 12px;
+    background: #3949ab;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 6px;
+    transition: background 0.2s, transform 0.1s;
+  }
+  .calc-btn:hover  { background: #283593; }
+  .calc-btn:active { transform: scale(0.98); }
+
+  .result { display: none; margin-top: 28px; border-top: 1.5px solid #eef0f8; padding-top: 20px; }
+  .result-row { display: flex; justify-content: space-between; font-size: 0.92rem; padding: 7px 0; border-bottom: 1px solid #f0f2fa; }
+  .result-row:last-child { border: none; }
+  .rl { color: #666; }
+  .rv { font-weight: 600; color: #1a237e; }
+  .harf { font-size: 3rem; font-weight: 800; text-align: center; color: #3949ab; padding: 16px 0 8px; letter-spacing: -1px; }
+  .durum-wrap { text-align: center; }
+  .durum {
+    display: inline-block;
+    padding: 6px 28px;
+    border-radius: 999px;
+    font-size: 0.92rem;
+    font-weight: 700;
+  }
+  .gecti { background: #e8f5e9; color: #1b5e20; }
+  .kaldi { background: #ffebee; color: #b71c1c; }
+</style>
+</head>
+<body>
+
+<header class="lab-header">
+  <h1>Hafta 6.1 – Not Hesaplama</h1>
+  <p>Vize (%40) ve Final (%60) notlarına göre ortalama, harf notu ve geçme durumu hesaplar.</p>
+</header>
+<a class="back-btn" href="index.html">← Ana Sayfaya Dön</a>
+
+<div class="lab-body">
+  <div class="card">
+    <h2>Not Hesaplama Sistemi</h2>
+
+    <div class="field">
+      <label>Ad Soyad</label>
+      <input type="text" id="adsoyad" placeholder="Örn: Selin Tutuncu">
+    </div>
+    <div class="field">
+      <label>Vize Notu (0–100)</label>
+      <input type="text" id="vize" placeholder="0 – 100">
+      <div class="err" id="vize-err">0 ile 100 arasında geçerli bir sayı girin.</div>
+    </div>
+    <div class="field">
+      <label>Final Notu (0–100)</label>
+      <input type="text" id="final" placeholder="0 – 100">
+      <div class="err" id="final-err">0 ile 100 arasında geçerli bir sayı girin.</div>
+    </div>
+
+    <button class="calc-btn" onclick="hesapla()">Hesapla</button>
+
+    <div class="result" id="result">
+      <div class="result-row"><span class="rl">Öğrenci</span><span class="rv" id="r-ad"></span></div>
+      <div class="result-row"><span class="rl">Vize katkısı (%40)</span><span class="rv" id="r-vk"></span></div>
+      <div class="result-row"><span class="rl">Final katkısı (%60)</span><span class="rv" id="r-fk"></span></div>
+      <div class="result-row"><span class="rl">Ağırlıklı Ortalama</span><span class="rv" id="r-ort"></span></div>
+      <div class="harf" id="r-harf"></div>
+      <div class="durum-wrap"><span class="durum" id="r-durum"></span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function validate(id, errId) {
+  var v = parseFloat(document.getElementById(id).value);
+  var ok = !isNaN(v) && v >= 0 && v <= 100;
+  document.getElementById(errId).style.display = ok ? 'none' : 'block';
+  return ok ? v : null;
+}
+function harfNotu(o) {
+  if (o >= 90) return 'AA';
+  if (o >= 85) return 'BA';
+  if (o >= 75) return 'BB';
+  if (o >= 70) return 'CB';
+  if (o >= 60) return 'CC';
+  if (o >= 55) return 'DC';
+  if (o >= 50) return 'DD';
+  if (o >= 40) return 'FD';
+  return 'FF';
+}
+function hesapla() {
+  var ad    = document.getElementById('adsoyad').value.trim();
+  var vize  = validate('vize', 'vize-err');
+  var final = validate('final', 'final-err');
+  if (!ad)  { alert('Lütfen ad soyad girin!'); return; }
+  if (vize === null || final === null) return;
+
+  var ort   = vize * 0.4 + final * 0.6;
+  var harf  = harfNotu(ort);
+  var gecti = ort >= 50;
+
+  document.getElementById('r-ad').textContent  = ad;
+  document.getElementById('r-vk').textContent  = (vize * 0.4).toFixed(2);
+  document.getElementById('r-fk').textContent  = (final * 0.6).toFixed(2);
+  document.getElementById('r-ort').textContent = ort.toFixed(2);
+  document.getElementById('r-harf').textContent = harf;
+
+  var d = document.getElementById('r-durum');
+  d.textContent = gecti ? '✓  GEÇTİ' : '✗  KALDI';
+  d.className   = 'durum ' + (gecti ? 'gecti' : 'kaldi');
+
+  document.getElementById('result').style.display = 'block';
+}
+</script>
+
+</body>
+</html>
