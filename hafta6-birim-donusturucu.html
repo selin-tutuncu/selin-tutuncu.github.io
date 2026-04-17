@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hafta 6.2 – Birim Dönüştürücü | Selin TUTUNCU</title>
+<link rel="stylesheet" href="styles/style.css">
+<style>
+  .lab-header {
+    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
+    color: #fff;
+    padding: 32px 40px 24px;
+  }
+  .lab-header h1 { font-size: 2rem; font-weight: 700; margin: 0 0 6px; }
+  .lab-header p  { font-size: 0.95rem; opacity: 0.85; margin: 0; }
+
+  .back-btn {
+    display: inline-block;
+    margin: 24px 40px 0;
+    padding: 8px 20px;
+    background: #fff;
+    color: #3949ab;
+    border: 1.5px solid #3949ab;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
+  .back-btn:hover { background: #3949ab; color: #fff; }
+
+  .lab-body { max-width: 520px; margin: 32px auto 60px; padding: 0 20px; }
+
+  .card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+    padding: 32px;
+  }
+  .card h2 { font-size: 1.3rem; font-weight: 700; color: #1a237e; margin: 0 0 24px; }
+
+  /* Kategori tabları */
+  .tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+  .tab {
+    flex: 1; min-width: 100px;
+    padding: 9px 8px;
+    background: #eef0f8;
+    border: none; border-radius: 10px;
+    font-size: 0.88rem; font-weight: 600; color: #3949ab;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .tab.active { background: #3949ab; color: #fff; }
+  .tab:hover:not(.active) { background: #dde3f0; }
+
+  /* Birim seçiciler */
+  .select-row { display: grid; grid-template-columns: 1fr 44px 1fr; gap: 10px; align-items: end; margin-bottom: 16px; }
+  .sel-group label { display: block; font-size: 0.83rem; color: #555; font-weight: 500; margin-bottom: 5px; }
+  select {
+    width: 100%; padding: 10px 10px;
+    border: 1.5px solid #dde3f0; border-radius: 10px;
+    font-size: 0.92rem; outline: none; background: #fff;
+    transition: border 0.2s; cursor: pointer;
+  }
+  select:focus { border-color: #3949ab; }
+
+  .swap-btn {
+    width: 44px; height: 44px;
+    background: #eef0f8; border: 1.5px solid #dde3f0;
+    border-radius: 10px; font-size: 1.2rem;
+    cursor: pointer; display: flex; align-items: center; justify-content: center;
+    transition: background 0.2s; color: #3949ab;
+  }
+  .swap-btn:hover { background: #dde3f0; }
+
+  /* Değer girişi */
+  .field { margin-bottom: 16px; }
+  .field label { display: block; font-size: 0.83rem; color: #555; font-weight: 500; margin-bottom: 5px; }
+  .field input {
+    width: 100%; box-sizing: border-box;
+    padding: 10px 14px;
+    border: 1.5px solid #dde3f0; border-radius: 10px;
+    font-size: 1rem; outline: none;
+    transition: border 0.2s;
+  }
+  .field input:focus { border-color: #3949ab; }
+
+  .calc-btn {
+    width: 100%; padding: 12px;
+    background: #3949ab; color: #fff;
+    border: none; border-radius: 10px;
+    font-size: 1rem; font-weight: 700; cursor: pointer;
+    margin-top: 4px; transition: background 0.2s, transform 0.1s;
+  }
+  .calc-btn:hover  { background: #283593; }
+  .calc-btn:active { transform: scale(0.98); }
+
+  /* Sonuç */
+  .result-box {
+    display: none; margin-top: 24px;
+    background: #f4f6ff; border-radius: 12px;
+    padding: 20px; text-align: center;
+  }
+  .result-num  { font-size: 2.4rem; font-weight: 800; color: #3949ab; letter-spacing: -1px; }
+  .result-desc { font-size: 0.88rem; color: #666; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<header class="lab-header">
+  <h1>Hafta 6.2 – Birim Dönüştürücü</h1>
+  <p>Sıcaklık, uzunluk ve ağırlık birimlerini birbirine dönüştürür.</p>
+</header>
+<a class="back-btn" href="index.html">← Ana Sayfaya Dön</a>
+
+<div class="lab-body">
+  <div class="card">
+    <h2>Birim Dönüştürücü</h2>
+
+    <div class="tabs">
+      <button class="tab active" onclick="setKat('sicaklik',this)">🌡 Sıcaklık</button>
+      <button class="tab" onclick="setKat('uzunluk',this)">📏 Uzunluk</button>
+      <button class="tab" onclick="setKat('agirlik',this)">⚖️ Ağırlık</button>
+    </div>
+
+    <div class="select-row">
+      <div class="sel-group">
+        <label>Kaynak birim</label>
+        <select id="from" onchange="donustur()"></select>
+      </div>
+      <button class="swap-btn" onclick="swap()" title="Ters çevir">⇌</button>
+      <div class="sel-group">
+        <label>Hedef birim</label>
+        <select id="to" onchange="donustur()"></select>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Değer</label>
+      <input type="number" id="inp" value="0" oninput="donustur()">
+    </div>
+
+    <button class="calc-btn" onclick="donustur()">Dönüştür</button>
+
+    <div class="result-box" id="result-box">
+      <div class="result-num"  id="result-num"></div>
+      <div class="result-desc" id="result-desc"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var birimler = {
+  sicaklik: ['Celsius','Fahrenheit','Kelvin'],
+  uzunluk : ['Metre','Kilometre','Mil','Santimetre','Milimetre','Fit','İnç'],
+  agirlik : ['Kilogram','Gram','Pound','Ons','Ton']
+};
+var kategori = 'sicaklik';
+
+function setKat(k, el) {
+  kategori = k;
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('active'); });
+  el.classList.add('active');
+  doldur();
+  donustur();
+}
+
+function doldur() {
+  var opts = birimler[kategori];
+  ['from','to'].forEach(function(id, i) {
+    var s = document.getElementById(id);
+    s.innerHTML = opts.map(function(o,j){
+      return '<option value="'+o+'"'+(j===i?' selected':'')+'>'+o+'</option>';
+    }).join('');
+  });
+  if (kategori !== 'sicaklik') document.getElementById('to').selectedIndex = 1;
+}
+
+function baza(v, b) {
+  if (kategori === 'sicaklik') {
+    if (b==='Celsius')    return v;
+    if (b==='Fahrenheit') return (v-32)*5/9;
+    if (b==='Kelvin')     return v-273.15;
+  }
+  if (kategori === 'uzunluk') {
+    var f={Metre:1,Kilometre:1000,Mil:1609.344,Santimetre:0.01,Milimetre:0.001,Fit:0.3048,'İnç':0.0254};
+    return v * f[b];
+  }
+  if (kategori === 'agirlik') {
+    var f={Kilogram:1,Gram:0.001,Pound:0.453592,Ons:0.0283495,Ton:1000};
+    return v * f[b];
+  }
+}
+function bazadan(v, b) {
+  if (kategori === 'sicaklik') {
+    if (b==='Celsius')    return v;
+    if (b==='Fahrenheit') return v*9/5+32;
+    if (b==='Kelvin')     return v+273.15;
+  }
+  if (kategori === 'uzunluk') {
+    var f={Metre:1,Kilometre:1000,Mil:1609.344,Santimetre:0.01,Milimetre:0.001,Fit:0.3048,'İnç':0.0254};
+    return v / f[b];
+  }
+  if (kategori === 'agirlik') {
+    var f={Kilogram:1,Gram:0.001,Pound:0.453592,Ons:0.0283495,Ton:1000};
+    return v / f[b];
+  }
+}
+
+function donustur() {
+  var val  = parseFloat(document.getElementById('inp').value);
+  var from = document.getElementById('from').value;
+  var to   = document.getElementById('to').value;
+  if (isNaN(val)) { document.getElementById('result-box').style.display='none'; return; }
+
+  var sonuc = bazadan(baza(val, from), to);
+  var fmt   = (Math.abs(sonuc) >= 0.0001 || sonuc===0) ? parseFloat(sonuc.toFixed(6)) : sonuc.toExponential(3);
+
+  document.getElementById('result-num').textContent  = fmt;
+  document.getElementById('result-desc').textContent = val+' '+from+' = '+fmt+' '+to;
+  document.getElementById('result-box').style.display = 'block';
+}
+
+function swap() {
+  var f=document.getElementById('from'), t=document.getElementById('to');
+  var tmp=f.value; f.value=t.value; t.value=tmp;
+  donustur();
+}
+
+doldur();
+donustur();
+</script>
+
+</body>
+</html>
