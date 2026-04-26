@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hafta 7 | Bootstrap & JavaScript Etkinlik Kayıt</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/hafta7.css">
+</head>
+<body id="pageBody">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg" id="mainNavbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">SelinLab</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Hakkımda</a></li>
+          <li class="nav-item"><a class="nav-link" href="interests.html">İlgi Alanlarım</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">İletişim</a></li>
+        </ul>
+        <button class="btn btn-outline-light ms-3 btn-sm" id="temaBtn">🌙 Tema Değiştir</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero-section py-5">
+    <div class="container text-center py-4">
+      <span class="badge rounded-pill mb-3 px-3 py-2" id="heroBadge">Hafta 7 Laboratuvar</span>
+      <h1 class="display-5 fw-bold mb-3">Bootstrap & JavaScript ile<br>Etkinlik Kayıt Sayfası</h1>
+      <p class="lead mb-4 mx-auto" style="max-width:600px;">
+        Bu uygulama Bootstrap bileşenleri ve JavaScript DOM etkileşimleriyle
+        hazırlanmış responsive bir etkinlik kayıt platformudur.
+      </p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="#basvuruFormu" class="btn btn-primary btn-lg px-4">Hemen Başvur</a>
+        <a href="#etkinlikler" class="btn btn-outline-secondary btn-lg px-4">Etkinlikleri Gör</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ETKİNLİK KARTLARI -->
+  <section class="py-5" id="etkinlikler">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-2">Yaklaşan Etkinlikler</h2>
+      <p class="text-center text-muted mb-5">Aşağıdaki etkinliklerden birine kayıt olabilirsiniz.</p>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0 event-card">
+            <div class="card-header rounded-top-4 text-white text-center py-3" style="background:#3949ab;">
+              <span class="fs-2">💻</span>
+              <div class="small mt-1 opacity-75">15 Mayıs 2025</div>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Web Geliştirme Bootcamp</h5>
+              <p class="card-text text-muted">HTML, CSS ve JavaScript temellerini uygulamalı olarak öğreneceğiniz yoğun bir hafta sonu programı.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="badge bg-primary-subtle text-primary rounded-pill px-3">Ücretsiz</span>
+                <span class="badge bg-secondary-subtle text-secondary rounded-pill px-3">Online</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <button class="btn btn-primary w-100 rounded-3" onclick="etkinlikSec('Web Geliştirme Bootcamp')">Seç & Başvur</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0 event-card">
+            <div class="card-header rounded-top-4 text-white text-center py-3" style="background:#00897b;">
+              <span class="fs-2">🎨</span>
+              <div class="small mt-1 opacity-75">22 Mayıs 2025</div>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">UI/UX Tasarım Atölyesi</h5>
+              <p class="card-text text-muted">Figma kullanarak modern arayüz tasarımı, kullanıcı deneyimi prensipleri ve prototip oluşturma.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="badge bg-success-subtle text-success rounded-pill px-3">150 ₺</span>
+                <span class="badge bg-secondary-subtle text-secondary rounded-pill px-3">İstanbul</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <button class="btn btn-success w-100 rounded-3" onclick="etkinlikSec('UI/UX Tasarım Atölyesi')">Seç & Başvur</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card h-100 shadow-sm rounded-4 border-0 event-card">
+            <div class="card-header rounded-top-4 text-white text-center py-3" style="background:#e53935;">
+              <span class="fs-2">🚀</span>
+              <div class="small mt-1 opacity-75">1 Haziran 2025</div>
+            </div>
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold">Yapay Zeka & Gelecek</h5>
+              <p class="card-text text-muted">Yapay zeka teknolojilerinin günlük hayata ve iş dünyasına etkileri üzerine interaktif bir panel.</p>
+              <div class="d-flex gap-2 flex-wrap mt-3">
+                <span class="badge bg-danger-subtle text-danger rounded-pill px-3">Ücretsiz</span>
+                <span class="badge bg-secondary-subtle text-secondary rounded-pill px-3">Hybrid</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent border-0 px-4 pb-4">
+              <button class="btn btn-danger w-100 rounded-3" onclick="etkinlikSec('Yapay Zeka & Gelecek')">Seç & Başvur</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BAŞVURU FORMU -->
+  <section class="py-5" id="basvuruFormu">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card shadow rounded-4 border-0 p-4" id="formCard">
+            <h2 class="fw-bold mb-1 text-center">Etkinlik Başvurusu</h2>
+            <p class="text-muted text-center mb-4 small">Tüm alanları doldurup başvurunuzu tamamlayın.</p>
+
+            <form id="basvuruForm" novalidate>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold" for="adSoyad">Ad Soyad <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-3" id="adSoyad" placeholder="Adınızı ve soyadınızı giriniz">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold" for="email">E-posta <span class="text-danger">*</span></label>
+                <input type="email" class="form-control rounded-3" id="email" placeholder="ornek@email.com">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold" for="telefon">Telefon</label>
+                <input type="tel" class="form-control rounded-3" id="telefon" placeholder="05xx xxx xx xx">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold" for="etkinlikSec">Etkinlik Seçin <span class="text-danger">*</span></label>
+                <select class="form-select rounded-3" id="etkinlikSec">
+                  <option value="">-- Etkinlik Seçiniz --</option>
+                  <option value="Web Geliştirme Bootcamp">Web Geliştirme Bootcamp</option>
+                  <option value="UI/UX Tasarım Atölyesi">UI/UX Tasarım Atölyesi</option>
+                  <option value="Yapay Zeka & Gelecek">Yapay Zeka & Gelecek</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold" for="deneyim">Deneyim Seviyesi <span class="text-danger">*</span></label>
+                <select class="form-select rounded-3" id="deneyim">
+                  <option value="">-- Seviyenizi Seçiniz --</option>
+                  <option value="Başlangıç">Başlangıç</option>
+                  <option value="Orta">Orta</option>
+                  <option value="İleri">İleri</option>
+                </select>
+              </div>
+
+              <div class="mb-4">
+                <label class="form-label fw-semibold" for="mesaj">Beklentileriniz</label>
+                <textarea class="form-control rounded-3" id="mesaj" rows="3" placeholder="Bu etkinlikten beklentilerinizi yazın..."></textarea>
+              </div>
+
+              <div class="mb-4 form-check">
+                <input type="checkbox" class="form-check-input" id="kvkk">
+                <label class="form-check-label small" for="kvkk">
+                  Kişisel verilerimin işlenmesine ilişkin <a href="#" class="text-primary">KVKK aydınlatma metnini</a> okudum, onaylıyorum. <span class="text-danger">*</span>
+                </label>
+              </div>
+
+              <!-- Uyarı alanı -->
+              <div id="uyariAlani" class="alert alert-danger d-none rounded-3 py-2 small" role="alert"></div>
+
+              <button type="submit" class="btn btn-primary w-100 py-2 rounded-3 fw-semibold">
+                Başvuruyu Tamamla
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SONUÇ ALANI -->
+  <section class="py-3 mb-5" id="sonucBolumu" style="display:none !important;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <div class="card border-0 shadow rounded-4 p-4" id="sonucAlani"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-4 mt-auto" id="pageFooter">
+    <div class="container text-center">
+      <p class="mb-0 small">© <span id="footerYil"></span> Selin TUTUNCU | Web Programlama Hafta 7 Laboratuvarı</p>
+      <p class="mb-0 small mt-1 opacity-75">Bootstrap 5 + JavaScript ile hazırlanmıştır.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="scripts/hafta7.js"></script>
+</body>
+</html>
