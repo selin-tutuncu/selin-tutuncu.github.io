@@ -1,0 +1,121 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- NAVBAR ---------- */
+#mainNavbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e8eaf6;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 14px 0;
+}
+#mainNavbar .navbar-brand {
+  color: #3949ab;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+#mainNavbar .nav-link {
+  color: #444;
+  font-weight: 500;
+}
+#mainNavbar .nav-link:hover { color: #3949ab; }
+
+/* ---------- HERO ---------- */
+.hero-section {
+  background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+  border-bottom: 1px solid #e0e0e0;
+}
+.hero-section h1 { color: #1a237e; }
+.hero-section .badge { background: #3949ab; color: #fff; font-size: 0.85rem; }
+
+/* ---------- ETKİNLİK KARTLARI ---------- */
+.event-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12) !important;
+}
+
+/* ---------- FORM ---------- */
+#formCard {
+  background: #ffffff;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #3949ab;
+  box-shadow: 0 0 0 0.2rem rgba(57,73,171,0.15);
+}
+.btn-primary {
+  background: #3949ab;
+  border-color: #3949ab;
+}
+.btn-primary:hover {
+  background: #283593;
+  border-color: #283593;
+}
+
+/* ---------- FOOTER ---------- */
+#pageFooter {
+  background: #1a237e;
+  color: #c5cae9;
+  border-top: 3px solid #3949ab;
+}
+
+/* =============================================
+   KARANLIK TEMA
+   ============================================= */
+.dark-theme {
+  background: #121212 !important;
+  color: #e0e0e0 !important;
+}
+.dark-theme .text-muted { color: #9e9e9e !important; }
+
+.dark-hero {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%) !important;
+}
+.dark-hero h1 { color: #90caf9 !important; }
+.dark-hero p  { color: #b0bec5 !important; }
+.dark-hero .badge { background: #3949ab !important; }
+
+#mainNavbar.navbar-dark {
+  background: #1e1e1e !important;
+  border-bottom: 1px solid #333 !important;
+}
+#mainNavbar.navbar-dark .navbar-brand { color: #90caf9 !important; }
+#mainNavbar.navbar-dark .nav-link     { color: #ccc !important; }
+#mainNavbar.navbar-dark .nav-link:hover { color: #90caf9 !important; }
+
+.dark-theme .card,
+.dark-card {
+  background: #1e1e1e !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #333 !important;
+}
+.dark-theme .card-header { border-bottom: 1px solid #333 !important; }
+.dark-theme .card-footer { border-top: 1px solid #333 !important; }
+.dark-theme .card-text   { color: #9e9e9e !important; }
+
+.dark-theme .form-control,
+.dark-theme .form-select {
+  background: #2c2c2c !important;
+  color: #e0e0e0 !important;
+  border-color: #444 !important;
+}
+.dark-theme .form-control::placeholder { color: #777 !important; }
+.dark-theme .form-label { color: #ccc !important; }
+.dark-theme .form-check-label { color: #aaa !important; }
+.dark-theme hr { border-color: #444 !important; }
+.dark-theme h2, .dark-theme h4, .dark-theme h5 { color: #e0e0e0 !important; }
+
+.dark-footer {
+  background: #0d0d0d !important;
+  color: #9e9e9e !important;
+  border-top: 3px solid #3949ab !important;
+}
+
+.dark-theme section { background: #121212 !important; }
+.dark-theme .bg-primary-subtle   { background: #1a237e22 !important; }
+.dark-theme .bg-success-subtle   { background: #00695c22 !important; }
+.dark-theme .bg-danger-subtle    { background: #b7000022 !important; }
+.dark-theme .bg-secondary-subtle { background: #33333322 !important; }
